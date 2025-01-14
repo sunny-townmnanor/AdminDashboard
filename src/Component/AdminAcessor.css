@@ -1,0 +1,23 @@
+#Controlflow{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgb(240, 240, 240);
+    width: 17vw;
+    height: 97.5vh;
+    padding: 10px;
+}
+#Controlflow span{
+    display: flex;
+padding: 5px 10px;
+font-size: 1.2rem;
+background-color: white;
+height: 5vh;
+border-radius: 8px;
+box-shadow: 1px 1px 1px 1px #e1d7d7;
+cursor: pointer;
+}
+#Controlflow span:hover{
+    box-shadow: 1px 1px 1px 1px #696868;  
+    /* background-color: rgb(238, 238, 238); */
+}

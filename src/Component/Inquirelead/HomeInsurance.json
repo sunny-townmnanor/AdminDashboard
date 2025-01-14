@@ -1,0 +1,233 @@
+[
+    {
+      "name": "sunny",
+      "phoneNumber": "8752613132",
+      "email": "sunnysingh29122001@gmail.com",
+      "pinCode": "121001",
+      "city": "Noida",
+      "tenure": "5 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Amit Kumar",
+      "phoneNumber": "9801122334",
+      "email": "amitkumar123@gmail.com",
+      "pinCode": "110015",
+      "city": "Delhi",
+      "tenure": "3 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Priya Sharma",
+      "phoneNumber": "9212345678",
+      "email": "priyasharma@example.com",
+      "pinCode": "500074",
+      "city": "Hyderabad",
+      "tenure": "4 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Ravi Verma",
+      "phoneNumber": "8866778899",
+      "email": "ravi.verma@gmail.com",
+      "pinCode": "122018",
+      "city": "Gurgaon",
+      "tenure": "2 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Sanjay Yadav",
+      "phoneNumber": "9876543210",
+      "email": "sanjayyadav@outlook.com",
+      "pinCode": "431001",
+      "city": "Aurangabad",
+      "tenure": "6 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Anjali Patel",
+      "phoneNumber": "9156123456",
+      "email": "anjalipatel@rediffmail.com",
+      "pinCode": "500062",
+      "city": "Bangalore",
+      "tenure": "1 Year",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Vikram Singh",
+      "phoneNumber": "8765432109",
+      "email": "vikramsingh@email.com",
+      "pinCode": "122018",
+      "city": "Gurgaon",
+      "tenure": "8 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Geeta Rani",
+      "phoneNumber": "9023456789",
+      "email": "geetarani91@gmail.com",
+      "pinCode": "395001",
+      "city": "Surat",
+      "tenure": "10 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Nitin Kumar",
+      "phoneNumber": "9512345670",
+      "email": "nitinkumar789@outlook.com",
+      "pinCode": "134202",
+      "city": "Ambala",
+      "tenure": "4 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Seema Rathi",
+      "phoneNumber": "9638527410",
+      "email": "seemarathi@gmail.com",
+      "pinCode": "110020",
+      "city": "Delhi",
+      "tenure": "7 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Rohit Mehra",
+      "phoneNumber": "9675426809",
+      "email": "rohitmehra23@gmail.com",
+      "pinCode": "395007",
+      "city": "Surat",
+      "tenure": "3 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Pooja Reddy",
+      "phoneNumber": "9412135689",
+      "email": "poojareddy@email.com",
+      "pinCode": "500072",
+      "city": "Hyderabad",
+      "tenure": "6 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Tarun Yadav",
+      "phoneNumber": "9506721834",
+      "email": "tarunyadav@outlook.com",
+      "pinCode": "110023",
+      "city": "Delhi",
+      "tenure": "5 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Neha Bansal",
+      "phoneNumber": "9302108765",
+      "email": "neha.bansal@gmail.com",
+      "pinCode": "122001",
+      "city": "Gurgaon",
+      "tenure": "2 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Manoj Tiwari",
+      "phoneNumber": "9821637485",
+      "email": "manojtiwari123@email.com",
+      "pinCode": "122018",
+      "city": "Gurgaon",
+      "tenure": "4 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Suman Kumari",
+      "phoneNumber": "9116540321",
+      "email": "sumankumari@rediffmail.com",
+      "pinCode": "121003",
+      "city": "Noida",
+      "tenure": "7 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Devendra Kumar",
+      "phoneNumber": "9602839456",
+      "email": "devendra.kumar@ymail.com",
+      "pinCode": "110016",
+      "city": "Delhi",
+      "tenure": "8 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Kavita Agarwal",
+      "phoneNumber": "9827635412",
+      "email": "kavita.agarwal@gmail.com",
+      "pinCode": "400056",
+      "city": "Mumbai",
+      "tenure": "6 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Gaurav Singh",
+      "phoneNumber": "9927486513",
+      "email": "gaurav.singh@outlook.com",
+      "pinCode": "500060",
+      "city": "Bangalore",
+      "tenure": "4 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Shalini Patel",
+      "phoneNumber": "9305471829",
+      "email": "shalinipatel@gmail.com",
+      "pinCode": "121005",
+      "city": "Noida",
+      "tenure": "3 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Vijay Kumar",
+      "phoneNumber": "9210475126",
+      "email": "vijay.kumar@rediffmail.com",
+      "pinCode": "122017",
+      "city": "Gurgaon",
+      "tenure": "5 Years",
+      "selectedInsurance": "Motor Life Insurance",
+      "authorized": false
+    },
+    {
+      "name": "Shubham Joshi",
+      "phoneNumber": "9873105423",
+      "email": "shubham.joshi@gmail.com",
+      "pinCode": "500084",
+      "city": "Hyderabad",
+      "tenure": "7 Years",
+      "selectedInsurance": "General Life Insurance",
+      "authorized": true
+    },
+    {
+      "name": "Anupama Singh",
+      "phoneNumber": "9056214785",
+      "email": "anupama.singh@yahoo.com",
+      "pinCode": "110025",
+      "city": "Delhi",
+      "tenure": "9 Years",
+      "selectedInsurance": "Health Insurance",
+      "authorized": true
+    }
+  ]
+  

@@ -1,0 +1,41 @@
+.propertytable{
+    display: flex;
+    flex-direction: row;
+}
+/* #proptablehead{
+    text-align: center;
+} */
+.propertycontrol{
+    display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.propertycontrol span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh auto;
+    font-size: 1.3rem;
+    height: fit-content;
+} 
+#propertyimg{
+    width: 5vw;
+    height: 5vw;
+}
+.propertyicon{
+    max-width: 40px;
+    max-height: 40px;
+}
+.iconcontainer{
+    border: none;
+}
+.pagination{
+    width: 100%;
+    margin: 2vh auto;
+    display: flex
+;
+    gap: 10px;
+    /* align-items: center; */
+    /* text-align: center; */
+    justify-content: center;
+}
