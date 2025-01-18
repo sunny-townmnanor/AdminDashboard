@@ -25,3 +25,23 @@
     border: 1px solid gray;
     color: white;
 }
+#navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#navigation span{
+ border: 1px solid gainsboro;
+ width: 10vw;
+ height: 5vh;
+ padding: 8px;
+ border-radius: 7px;
+ cursor: pointer;
+}
+#cityfilter{
+    display: flex;
+    flex-direction: row;
+    width:fit-content !important;
+    height: 7vh !important;
+    justify-content: space-between !important;
+}

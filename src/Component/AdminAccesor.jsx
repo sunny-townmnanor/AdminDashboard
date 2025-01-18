@@ -11,9 +11,9 @@ function AdminAccesor() {
     }}>
         <img src='/navbarlogo.png'></img>
     </div>
-    <span>Property control</span>
+   <Link to='/'><span>Property control</span></Link>
     <span>User Agent</span>
-   <Link to='Inquire'> <span >Inquire/lead</span></Link>
+   <Link to='/Inquire'> <span >Inquire/lead</span></Link>
     <span>Blog & article</span>
     <span>package & subscription</span>
     <span>Subscription management </span>
