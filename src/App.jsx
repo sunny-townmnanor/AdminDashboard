@@ -8,7 +8,7 @@ import PropertyEditForm from './Component/PropertyTable/PropertyEditForm'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import InquireMain from './Component/Inquirelead/InquireMain'
 import HomeInsurance from './Component/Inquirelead/HomeInsurance'
-
+import User from './Component/UserAgent/User'
 
 function App() {
   
@@ -21,6 +21,7 @@ function App() {
       <Route path="/editform/:index" element={<PropertyEditForm/>}></Route>
       <Route path="/Inquire" element={<InquireMain/>}></Route>
       <Route path="/HomeInsurance" element={<HomeInsurance/>}></Route>
+      <Route path="/UserAgent" element={<User/>}></Route>
       </Routes>
     </Router>
    {/* <AdminAccesor/>  */}
