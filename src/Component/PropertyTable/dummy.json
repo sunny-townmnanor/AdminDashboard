@@ -8,7 +8,7 @@
       "address": "Siddharth Vihar, Pratap Vihar, Ghaziabad",
       "configuration": "2,3",
       "area_detail": "616\t- 1104",
-      "area_type": "Apartment",
+      "area_type": "Plot",
       "bathroom": "2",
       "balcony": "Yes",
       "description": "<p>Prateek Grand Paeonia in Siddhartha Vihar, Ghaziabad, is a ready-to-move-in housing society offering a range of 2BHK apartments.</p>",
@@ -162,7 +162,7 @@
       "one_image_location": "/property3.jpg",
       "pincode": "110001",
       "property_for": "Sale",
-      "category": "Residential",
+      "category": "commercial",
       "floorplan": "elite_tower_floorplan.jpg",
       "status": 1,
       "ip_address": "162.158.235.8"
@@ -274,7 +274,7 @@
     "one_image_location": "/property1.jpg",
     "pincode": "201011",
     "property_for": "Sale",
-    "category": "Residential",
+    "category": "commercial",
     "floorplan": "2bhk_616sqft.jpg",
     "status": 1,
     "ip_address": "162.158.233.6"

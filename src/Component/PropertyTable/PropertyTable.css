@@ -39,3 +39,70 @@
     /* text-align: center; */
     justify-content: center;
 }
+#navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cityfilter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #cityfilter input, 
+  #cityfilter select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+  }
+  
+  #cityfilter input:focus, 
+  #cityfilter select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  #cityfilter button {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(to right, #ff4447, #8a2e2e);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #cityfilter button:hover {
+    background-color: #0056b3;
+  }
+  
+  #cityfilter select {
+    width: 220px;
+  }
+  
+  @media (max-width: 768px) {
+    #navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #cityfilter input, 
+    #cityfilter select {
+      width: 100%;
+    }
+  
+    #cityfilter button {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+  

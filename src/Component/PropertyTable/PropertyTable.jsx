@@ -12,8 +12,29 @@ function PropertyTable() {
   // Calculate the index range for the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentProperties = dummydata.slice(indexOfFirstItem, indexOfLastItem);
-  console.log(currentProperties);
+  const [filters, setFilters] = useState({
+    projectname: '',
+    city: '',
+    category: '',
+    propertytype: ''
+  });
+  const handleFilterChange = (e) => {
+    setFilters({
+      ...filters,
+      [e.target.name]: e.target.value
+    });
+  };
+  const filteredProperties = dummydata.filter((item) => {
+    return (
+      (filters.projectname ? item.property_name.toLowerCase().includes(filters.projectname.toLowerCase()) : true) &&
+      (filters.city ? item.city.toLowerCase().includes(filters.city.toLowerCase()) : true) &&
+      (filters.category ? item.category.toLowerCase() === filters.category.toLowerCase() : true) &&
+      (filters.propertytype ? item.area_type.toLowerCase().includes(filters.propertytype.toLowerCase()) : true)
+    );
+  });
+  const currentProperties = filteredProperties.slice(indexOfFirstItem, indexOfLastItem);
+
+
   // Function to change pages
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -22,6 +43,11 @@ function PropertyTable() {
   const Editnavigate = (value) => {
     navigate(`/editform/${value}`);
   }
+
+
+  console.log(filters)
+  //filter Function
+
   return (
     <div className='propertytable'>
       <div>
@@ -30,11 +56,47 @@ function PropertyTable() {
       <div className='propertycontrol'>
         <span id='proptablehead'>Property Listing Management Portal</span>
         <div id='navigation'>
-          <span>sort by id</span>
-          <span>sort by city</span>
-          <span>Sort by category</span>
-          <span>Sort by Property </span>
+          <span id='cityfilter'>
+            <input
+              type='text'
+              name='projectname'
+              value={filters.projectname}
+              onChange={handleFilterChange}
+            />
+            <button className='btn btn-primary'>Project Name</button>
+          </span>
+          <span id='cityfilter'>
+            <input
+              type='text'
+              name='city'
+              value={filters.city}
+              onChange={handleFilterChange}
+            />
+            <button className='btn btn-primary'>Sort by City</button>
+          </span>
+          <span id='cityfilter'>
+            <select
+              name='category'
+              value={filters.category}
+              onChange={handleFilterChange}
+            >
+              <option value="">Select Category</option>
+              <option value="Residential">Residential</option>
+              <option value="Commercial">Commercial</option>
+            </select>
+            <button className='btn btn-primary'>Sort by Category</button>
+          </span>
+          <span id='cityfilter'>
+            <input
+              type='text'
+              name='propertytype'
+              value={filters.propertytype}
+              onChange={handleFilterChange}
+            />
+            <button className='btn btn-primary'>Search by Property Type</button>
+          </span>
         </div>
+
         <div id='content'>
           <table class="table table-striped">
             <thead>
