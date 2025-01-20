@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import InquireMain from './Component/Inquirelead/InquireMain'
 import HomeInsurance from './Component/Inquirelead/HomeInsurance'
 import User from './Component/UserAgent/User'
+import Agent from './Component/Agent&Blog/Agent'
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
       <Route path="/Inquire" element={<InquireMain/>}></Route>
       <Route path="/HomeInsurance" element={<HomeInsurance/>}></Route>
       <Route path="/UserAgent" element={<User/>}></Route>
+      <Route path='/article' element={<Agent/>}></Route>
       </Routes>
     </Router>
    {/* <AdminAccesor/>  */}
