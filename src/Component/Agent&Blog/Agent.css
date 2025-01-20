@@ -1,0 +1,21 @@
+.AgentWorking{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 10px;
+    justify-content: center;
+}
+
+
+#Agent_mg {
+    width: 5vw;
+    height: 5vw;
+  }
+.Agent_id{
+    margin: 2vh auto;
+    font-size: 1.3rem;
+    height: fit-content;
+    text-align: center;
+} 

@@ -1,0 +1,72 @@
+[
+            {
+                "id": 1,
+                "heading": "Advantages of investment in commercial property",
+                "data": "Commercial property investment has long been considered a stable and profitable avenue for wealth-building. Unlike residential real estate, which is often subject to fluctuations in the housing market, commercial properties can offer numerous benefits that attract both experienced investors and newcomers alike. Here are some key advantages of investing in commercial property.",
+                "img": "/Smriti1.jpg" ,
+                "date": "14 Nov 2024"
+            },
+            {
+                "id": 2,
+                "heading": "Advantages of investment in residential property",
+                "data": "Residential real estate investment offers many benefits, including stable demand, long-term appreciation, and steady rental income. Understanding the advantages of investing in residential properties can help you make informed decisions and build long-term wealth.",
+                "img": "/residential.jpg",
+                "date": "10 Nov 2024"
+            },
+            {
+                "id": 3,
+                "heading": "Understanding the Real Estate Market Trends",
+                "data": "Real estate market trends fluctuate due to various factors such as interest rates, economic growth, and demographic shifts. It is important for investors to understand these trends to make informed investment decisions. Here we explore the various indicators that influence the market.",
+                "img": "/market-trends.jpg",
+                "date": "1 Dec 2024"
+            },
+            {
+                "id": 4,
+                "heading": "How to choose the right investment property",
+                "data": "Choosing the right property for investment is crucial for long-term success. This article highlights key considerations, including location, property type, potential rental income, and market conditions, to guide investors in making sound property choices.",
+                "img": "/investment-property.jpg",
+                "date": "5 Dec 2024"
+            },
+            {
+                "id": 5,
+                "heading": "Tax Benefits of Real Estate Investments",
+                "data": "Investing in real estate offers several tax benefits, such as deductions on mortgage interest, property taxes, and depreciation. This article discusses the different tax incentives available to real estate investors and how to make the most of them.",
+                "img": "/tax-benefits.jpg",
+                "date": "8 Dec 2024"
+            },
+            {
+                "id": 6,
+                "heading": "Risks Associated with Real Estate Investment",
+                "data": "While real estate investments offer numerous benefits, they are not without risks. Market volatility, maintenance costs, and tenant-related issues are just a few of the challenges investors may face. This article outlines the common risks and how to mitigate them.",
+                "img": "/risks-real-estate.jpg",
+                "date": "15 Dec 2024"
+            },
+            {
+                "id": 7,
+                "heading": "The Impact of Interest Rates on Real Estate Investments",
+                "data": "Interest rates play a significant role in the real estate market. Fluctuations in rates can affect property values, mortgage affordability, and investment returns. This article explains the connection between interest rates and real estate investments.",
+                "img": "/interest-rates.jpg",
+                "date": "20 Dec 2024"
+            },
+            {
+                "id": 8,
+                "heading": "Why Commercial Real Estate is a Safe Investment",
+                "data": "Commercial real estate has long been regarded as a stable investment option. This article explores the reasons why commercial properties tend to offer lower volatility compared to residential real estate, making them an attractive choice for investors seeking long-term growth.",
+                "img": "/commercial-safe.jpg",
+                "date": "25 Dec 2024"
+            },
+            {
+                "id": 9,
+                "heading": "Exploring the Benefits of Multi-Family Properties",
+                "data": "Multi-family properties offer a unique set of advantages for real estate investors, such as higher rental income, diversification, and risk reduction. This article discusses how multi-family investments can provide long-term financial security.",
+                "img": "/multi-family.jpg",
+                "date": "2 Jan 2025"
+            },
+            {
+                "id": 10,
+                "heading": "How to Build Wealth with Real Estate",
+                "data": "Real estate investment has been a proven way to build wealth over time. This article provides a roadmap for beginners looking to start investing in real estate, with tips on property selection, financing options, and long-term strategies.",
+                "img": "/build-wealth.jpg",
+                "date": "10 Jan 2025"
+            }
+]
