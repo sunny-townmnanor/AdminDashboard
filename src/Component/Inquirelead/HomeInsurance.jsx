@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import AdminAccesor from '../AdminAccesor'
 import dummy from './HomeInsurance.json'
 import './Inquire.css'
+import * as XLSX from 'xlsx';
 function HomeInsurance() {
     const [data,setdata] = useState(dummy);
     // useEffect(()=>{
     //     setdata(dummy);
     // },[])
     console.log(data);
+    const [x,setx] = useState();
+  const [y,sety] = useState();
     const[current,setcurrent] = useState(1);
     const itemsPerPage = 12;
     const lastindex = current*itemsPerPage;
@@ -17,6 +20,20 @@ function HomeInsurance() {
     const paginate=(value)=>{
         setcurrent(value);
     }
+    const exportToExcel = (x,y) => {
+      // Extract entries from 6 to 10 (adjust for zero-based index)
+      const selectedEntries = filterdata.slice(x, y); // Entries 6 to 10 (index 5 to 9)
+  
+      // Create a worksheet from selected entries
+      const ws = XLSX.utils.json_to_sheet(selectedEntries);
+  
+      // Create a workbook and append the worksheet
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Selected Properties');
+  
+      // Export the workbook as an Excel file
+      XLSX.writeFile(wb, 'selected_properties.xlsx');
+    };
   return (
     <div style={{
         display:'flex',
@@ -98,7 +115,25 @@ function HomeInsurance() {
               Next
             </button>
           </div>
+          <div>
+          <input
+      type='number'
+      value={x || ''}
+      onChange={(e) => setx(e.target.value)} 
+      placeholder="Enter start point"
+    />
+    <input
+      type='number'
+      value={y || ''}
+      onChange={(e) => sety(e.target.value)} 
+      placeholder="Enter end point"
+    />
+    <button className='btn btn-secondary' onClick={()=>{
+      exportToExcel(x,y);
+    }}>convert to excel</button>
+          </div>
         </div>
+
     </div>
   )
 }
