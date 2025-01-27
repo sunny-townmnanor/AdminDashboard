@@ -1,53 +1,79 @@
-// // src/AgentLogin.js
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import './AgentLogin.css';  // Add styles for the modal
 
-// function AgentLogin() {
-//     const [username, setUsername] = useState('');
-//     const [password, setPassword] = useState('');
-//     const [error, setError] = useState('');
-//     const navigate = useNavigate();
+function AgentLogin({ showLoginModal, setShowLoginModal }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
+  // Handle login form submission
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (!username || !password || !termsAccepted) {
+      alert('Please fill in all fields and accept the terms and conditions');
+    } else {
+      alert('Logged in successfully');
+      setShowLoginModal(false);  // Close the modal after login
+    }
+  };
 
-//         // Simulate user authentication with mock data
-//         const storedUser = JSON.parse(localStorage.getItem('user'));
+  // Handle checkbox change (terms acceptance)
+  const handleTermsChange = () => {
+    setTermsAccepted(!termsAccepted);
+  };
 
-//         if (storedUser && storedUser.username === username && storedUser.password === password) {
-//             navigate('/dashboard');
-//         } else {
-//             setError('Invalid credentials. Please try again.');
-//         }
-//     };
+  return (
+    <>
+      (
+        <div className="modal fade show agentlogin" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" className="btn-close" onClick={() => setShowLoginModal(false)} aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+                <form onSubmit={handleLogin}>
+                  <div className="mb-3">
+                    <label htmlFor="username"  className="form-label">Username</label>
+                    <input
+                      type="text"
+                      id="username"
+                      className="form-control"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="password" className="form-label">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      className="form-control"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      checked={termsAccepted}
+                      onChange={handleTermsChange}
+                    />
+                    <label className="form-check-label" htmlFor="terms">
+                      I accept the terms and conditions
+                    </label>
+                  </div>
+                  <button type="submit" className="btn btn-primary w-50">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    </>
+  );
+}
 
-//     return (
-//         <div className="login-container">
-//             <h2>Login</h2>
-//             <form onSubmit={handleSubmit}>
-//                 <input
-//                     type="text"
-//                     placeholder="Username"
-//                     value={username}
-//                     onChange={(e) => setUsername(e.target.value)}
-//                 />
-//                 <input
-//                     type="password"
-//                     placeholder="Password"
-//                     value={password}
-//                     onChange={(e) => setPassword(e.target.value)}
-//                 />
-//                 {error && <div className="error">{error}</div>}
-//                 <button type="submit">Login</button>
-//                 <div>
-//                     Don't have an account? <a href="/register">Register</a>
-//                 </div>
-//             </form>
-//         </div>
-//     );
-// }
-
-// export default AgentLogin;
-
-
-
+export default AgentLogin;

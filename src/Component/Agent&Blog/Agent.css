@@ -19,3 +19,9 @@
     height: fit-content;
     text-align: center;
 } 
+.pagination{
+    width: 100%;
+    margin: 2vh auto;
+    display: flex;
+    gap: 10px;
+}

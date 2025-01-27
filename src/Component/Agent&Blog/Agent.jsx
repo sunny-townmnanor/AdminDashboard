@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import AdminAccesor from '../AdminAccesor';
 import './Agent.css';
@@ -70,62 +71,64 @@ function Agent() {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    // Modal state for login
+    const [showLoginModal, setShowLoginModal] = useState(false);
+
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row'
-        }}>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
             <div>
                 <AdminAccesor />
             </div>
             <div className='AgentWorking'>
-                <div  style={{display:'flex'}}>
-                <h1 class="Agent_id">Artical Dashboard</h1>
-                <button style={{height:'30px'}} className="btn btn-warning btn-sm">Sign up</button>
-
+                <div style={{ display: 'flex' }}>
+                    <h1 className="Agent_id">Article/Blog Dashboard</h1>
                 </div>
 
-                <form onSubmit={(e) => e.preventDefault()}> {/* Prevent form submit from refreshing page */}
-                    <table className="table table-striped">
-                        <thead className="thead-dark">
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Picture</th>
-                                <th scope="col">Content</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {currentData.map((item) => (
-                                <tr key={item.id}>
-                                    <th scope="row">{item.id}</th>
-                                    <td>
-                                        <img
-                                            src={item.img}
-                                            alt="Image"
-                                            id="Agent_mg"
-                                            className="img-fluid"
-                                            style={{ width: '150px', height: '100px' }} // Adjust image size if needed
-                                        />
-                                    </td>
-                                    <td>{item.data}</td>
-                                    <td>{item.date}</td>
-                                    <td>
-                                        <button className="btn btn-warning btn-sm" onClick={(e) => handleEdit(item, e)}>
-                                            Edit
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button className="btn btn-danger btn-sm" onClick={() => deleteItem(item.id)}>
-                                            Delete
-                                        </button>
-                                    </td>
+                <form onSubmit={(e) => e.preventDefault()}>
+                    {data.length === 0 ? (
+                        <p>No articles available</p>
+                    ) : (
+                        <table className="table table-striped">
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Picture</th>
+                                    <th scope="col">Content</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Delete</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {currentData.map((item) => (
+                                    <tr key={item.id}>
+                                        <th scope="row">{item.id}</th>
+                                        <td>
+                                            <img
+                                                src={item.img}
+                                                alt="Image"
+                                                id="Agent_mg"
+                                                className="img-fluid"
+                                                style={{ width: '150px', height: '100px' }}
+                                            />
+                                        </td>
+                                        <td>{item.data}</td>
+                                        <td>{item.date}</td>
+                                        <td>
+                                            <button className="btn btn-warning btn-sm" onClick={(e) => handleEdit(item, e)}>
+                                                Edit
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button className="btn btn-danger btn-sm" onClick={() => deleteItem(item.id)}>
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
                 </form>
 
                 {/* Pagination Controls */}

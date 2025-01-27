@@ -1,0 +1,292 @@
+.ct-button {
+
+    background-color: #7a0a0a;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.Second-feature {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.secondfeatureleft {
+    text-align: left;
+    margin: 2vh 4vw;
+    flex: 70%;
+}
+
+/* .secondfeatureleft span {
+    font-size: 18px;
+    color: green;
+    font-weight: 500;
+}
+
+.secondfeatureleft p {
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px 1px gray;
+    height: fit-content;
+    width: 70%;
+} */
+
+.secondfeatureright {
+    margin: 2vh 2vw;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/* General styles for the email box */
+.emailbox {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style for the header text */
+.emailbox h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for the email input field */
+.emailbox input[type="email"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Input field focus effect */
+.emailbox input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Style for the submit button */
+.emailbox .btn {
+    width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.emailbox .btn:hover {
+    background-color: #218838;
+}
+
+/* Optional: Style for mobile responsiveness */
+@media (max-width: 600px) {
+    .emailbox {
+        padding: 15px;
+    }
+
+    .emailbox h1 {
+        font-size: 20px;
+    }
+
+    .emailbox input[type="email"],
+    .emailbox .btn {
+        width: 100%;
+    }
+}
+
+.sc-div {
+    background-color: #f7f7f7;
+    /* Light background for readability */
+    width: 94%;
+    margin: 30px;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+}
+
+/* Styling for the overall layout of the article */
+.secondfeatureleft {
+    background-color: #fff; /* Light background for readability */
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 8px; /* Rounded corners for a smooth look */
+    width: 80%; /* Restricts the width to keep the content centered */
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the blog heading (span) */
+.secondfeatureleft span {
+    font-size: 24px; /* Larger text for the heading */
+    font-weight: 600; /* Slightly bolder weight for emphasis */
+    color: green; /* Green color for the heading */
+    margin-bottom: 15px; /* Adds space below the heading */
+    display: block; /* Forces the span to be a block element */
+}
+
+/* Styling for the article paragraph (p) */
+.secondfeatureleft p {
+    font-size: 16px; /* Readable text size */
+    color: #333; /* Dark text color for contrast */
+    line-height: 1.8; /* Adds space between lines for better readability */
+    text-align: justify; /* Justifies the text for a clean look */
+    margin-top: 20px; /* Adds space above the paragraph */
+    padding: 20px; /* Adds padding around the text */
+    border: 1px solid #ddd; /* Light border around the paragraph */
+    border-radius: 8px; /* Rounded borders for the paragraph */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow around the paragraph */
+    background-color: #f9f9f9; /* Light background for the paragraph */
+}
+
+/* Optional: Links within the paragraph */
+.secondfeatureleft p a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Removes underline */
+}
+
+.secondfeatureleft p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .secondfeatureleft {
+        width: 90%; /* Slightly larger width on smaller screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .secondfeatureleft span {
+        font-size: 22px; /* Smaller font size for headings on mobile */
+    }
+
+    .secondfeatureleft p {
+        font-size: 14px; /* Smaller text for better readability on mobile */
+    }
+}
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.navigation-buttons a{
+    color: blueviolet;
+}
+/* Styling for the Preview Button */
+.preview-btn, .next-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for the Preview Button Hover */
+.preview-btn:hover, .next-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styling for the Next Button */
+.next-btn {
+    background-color: #007bff; /* Blue background */
+}
+
+/* Styling for the Next Button Hover */
+.next-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .secondfeatureleft {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .secondfeatureleft .blog-heading {
+        font-size: 22px;
+    }
+
+    .secondfeatureleft p {
+        font-size: 14px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview-btn, .next-btn {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+}
+
+/* Card Styling */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 10px;
+    margin-top: 40px;
+    width: 80%;
+    margin: 13px 4vw;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures rounded corners and hides overflow */
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Cards will take up the full width available in each grid cell */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the area of the card */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.card-content {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

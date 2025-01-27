@@ -14,6 +14,9 @@ import HomeShift from './Component/Home_Shift/HomeShift'
 import HomeInterior from './Component/HomeInterior/HomeInterior';
 import HomeLoan from './Component/Home_Loan/HomeLoan';
 import Commercial from './Component/Commercial/Commercial'
+import AgentLogin from './Component/Agent&Blog/AgentLogin'
+import BlockAgent from './Component/Agent&Blog/BlockAgent'
+import Articleblog from './Component/Agent&Blog/Articleblog'
 function App() {
   
 
@@ -30,7 +33,10 @@ function App() {
       <Route path="/HomeShift" element={<HomeShift/>}></Route>
       <Route path="/HomeInterior" element={<HomeInterior />} />
       <Route path="/HomeLoan" element={<HomeLoan/>}></Route>
-      <Route path="/Commercial" element={<Commercial/>}></Route>   
+      <Route path="/Commercial" element={<Commercial/>}></Route>
+      <Route path="/agentLogin" element={<AgentLogin />} />
+          <Route path="/blockAgent" element={<BlockAgent />} />
+          <Route path="/blockArtica/:index" element={<Articleblog />} />   
       </Routes>
     </Router>
    {/* <AdminAccesor/>  */}
