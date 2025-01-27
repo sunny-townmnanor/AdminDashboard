@@ -1,0 +1,48 @@
+/* .iw-heading{
+  text-align: center;
+} */
+.inquireworking{
+  text-align: center;
+  /* border-radius: 2px; */
+  margin: 15px;
+  
+}
+
+
+#inquireboxes {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  gap: 20px;  /* Space between the items */
+  margin-top: 20px;
+  height: fit-content;
+  width: 900px;
+  margin: 70px auto 0px;
+ 
+}
+
+/* Styling for each span */
+.inquiredivision {
+  padding: 20px;
+  /* background: linear-gradient(to right,#8a2e2e,#ff4447); */
+  color: white;
+  font-weight: bold;
+
+  
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Alternate left and right alignment using flex */
+.item1, .item3, .item5 {
+  align-self: flex-start; /* Align to the left */
+  width: 50%;
+  background: linear-gradient(to right,#8a2e2e,#ff4447);
+}
+
+.item2, .item4 {
+  align-self: flex-end; /* Align to the right */
+  width: 50%;
+  background-color: black;
+}
