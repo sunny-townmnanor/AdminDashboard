@@ -41,81 +41,36 @@ function Articleblog() {
         <div className="App">
             {/* Header Section */}
             <header className="App-header">
-                <img src={data.img} alt="Nature" style={{ height: '100vh', width: '100%', objectFit: 'cover' }} />
+                <img src="/img6.jpg" alt="Nature" style={{ height: '55vh', width: '100%', objectFit: 'cover' }} />
                 <div className="text-overlay">
                     <h1>{data.heading}</h1>
-                    <a href='#blogscontent'>
+                    {/* <a href='#blogscontent'>
                         <button className="ct-button">View Blog</button>
-                    </a>
+                    </a> */}
                 </div>
             </header>
-
             <div className="Second-feature" id='blogcontent'>
-                <div className='secondfeatureleft'>
-                    <span className="blog-heading">{data.heading}</span>
-                    <p className="sc-div">{data.data}</p>
-                    <div className="navigation-buttons">
-                        {/* Previous Button */}
-                        <a
-                            onClick={handlePrevious}
-                            style={{
-                                color: 'blueviolet',
-                                font: '18px',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                textDecoration: 'none'
-                            }}
-                        >
-                            &larr; Previous
-                        </a>
+                <p className="Second-feature-p">Topping marzipan tart cheesecake sweet lollipop jelly-o jelly beans. Marshmallow sweet fruitcake<br />
+                    apple pie I love oat cake jelly-o. Jelly jelly-o cupcake dessert I love cake chupa chups icing.<br />
+                    Powder sesame snaps powder sesame snaps pastry pudding I love.
+                </p>
 
-                        {/* Next Button */}
-                        <a
-                            onClick={handleNext}
-                            style={{
-                                color: 'blueviolet',
-                                font: '18px',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                textDecoration: 'none'
-                            }}
-                        >
-                            Next &rarr;
-                        </a>
-                    </div>
-                </div>
-
-                <div className='secondfeatureright'>
-                    <div className='emailbox'>
-                        <h1>Subscribe to Newsletter</h1>
-                        <input type='email' placeholder='Enter your email' />
-                        <br />
-                        <button className='btn btn-success'>Submit</button>
-                    </div>
+            </div>
+            <div className="Second-feature-1">
+                <img src="/img3.jpg" alt="Building" className="image-feature-1" />
+            </div>
+            <div className="Second-feature-2">
+                <h1>Topping Marzipan Tart Cheesecake Sweet Lollipop</h1>
+            </div>
+            <div className='secondfeatureright'>
+                <div className='emailbox'>
+                    <h1>Subscribe to Newsletter</h1>
+                    <input type='email' placeholder='Enter your email' />
+                    <br />
+                    <button className='btn btn-success'>Submit</button>
                 </div>
             </div>
-
-            <div className="cards-container">
-                <div className="card">
-                    <img src="/Building2.jpg" alt="Card Image" className="card-img" />
-                    <h3 className="card-title">Card 1</h3>
-                    <p className="card-content">This is the content for card 1.<br />
-                        You can put any information you like here.</p>
-                </div>
-                <div className="card">
-                    <img src="/Building2.jpg" alt="Card Image" className="card-img" />
-                    <h3 className="card-title">Card 2</h3>
-                    <p className="card-content">This is the content for card 2.<br />
-                        You can put any information you like here.</p>
-                </div>
-                <div className="card">
-                    <img src="/Building2.jpg" alt="Card Image" className="card-img" />
-                    <h3 className="card-title">Card 3</h3>
-                    <p className="card-content">This is the content for card 3.<br />
-                        You can put any information you like here.</p>
-                </div>
-            </div>
-        </div>
+        </div >
     );
 }
 

@@ -15,47 +15,6 @@ body {
 }
 
 /* Header Styles */
-.App-header {
-  position: relative;
-  height: 100vh;
-  /* Full height of the viewport */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.App-header img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(0.7);
-  /* Ensure the image covers the entire header */
-}
-
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Center the text */
-  color: white;
-  text-align: center;
-  font-weight: 500;
-}
-
-.text-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  
-}
-
-.text-overlay p {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
 
 .cta-button {
   background: linear-gradient(to right, #ff4447, #8a2e2e);
@@ -245,4 +204,7 @@ body {
 .feature-card img:hover {
   transform: scale(1.05); /* Zoom effect on hover */
 }
+
+
+
 

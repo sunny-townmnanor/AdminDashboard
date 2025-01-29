@@ -141,7 +141,7 @@ function BlockAgent() {
                     src="/blogmain.jpg"
                     alt="Nature"
                     style={{
-                        height: '100vh',
+                        height: '55vh',
                         width: '100%',
                         objectFit: 'cover',
                     }}
