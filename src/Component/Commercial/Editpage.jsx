@@ -14,6 +14,7 @@ function Editpage() {
     office_image: [],
     retail_shop: [],
     restaurant: [],
+    other: []
   });
   const [amenities, setAmenities] = useState([]);
   const [distances, setDistances] = useState([]);
@@ -38,6 +39,7 @@ function Editpage() {
           office_image: JSON.parse(response.data.office_image || '[]'),
           retail_shop: JSON.parse(response.data.retail_shop || '[]'),
           restaurant: JSON.parse(response.data.restaurant || '[]'),
+          other: JSON.parse(response.data.other || '[]'),
         });
       } catch (error) {
         console.error("Error fetching project data:", error);
@@ -81,17 +83,57 @@ function Editpage() {
   };
 
   // Image upload handler
-  const handleImageUpload = (e, imageType) => {
-    const files = e.target.files;
-    const newImages = [...imagePreview[imageType]];
 
-    for (let i = 0; i < files.length; i++) {
-      const imageUrl = URL.createObjectURL(files[i]);
-      newImages.push(imageUrl);
+
+  const handleImageUpload = async (e, imageType) => {
+    const files = Array.from(e.target.files); // Convert the FileList to an array
+    // Keep previous images for the given type
+
+    // Optional: Add a file limit (e.g., 10 images)
+    // Uncomment this block if you want to enforce a file limit.
+    // if (files.length + newImages.length > 10) {
+    //   alert('You can upload up to 10 images.');
+    //   files.splice(0, files.length - (10 - newImages.length)); // Keep only the allowed files
+    // }
+
+    // Prepare FormData for image upload
+    const formData = new FormData();
+    files.forEach(file => {
+      formData.append('images', file); // 'images' is the key expected by the backend
+    });
+
+    // Generate previews for the new images
+
+
+    try {
+      // Upload images to the backend (replace with your own API endpoint)
+      const response = await axios.post('https://www.townmanor.ai/api/image/aws-upload-commercial-images', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+
+      // Check if the upload was successful
+      if (response.status === 200) {
+        const uploadedImagePaths = response.data.fileUrls;
+
+        // Optionally clean up the image paths if needed
+        const trimmedImagePaths = uploadedImagePaths.map(path => {
+          return path.replace("https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/", "");
+        });
+
+        setImagePreview(prevState => ({
+          ...prevState,
+          [imageType]: [...prevState[imageType], ...trimmedImagePaths],
+        }));
+      } else {
+        console.error('Error uploading images:', response);
+        alert('Failed to upload images');
+      }
+    } catch (error) {
+      console.error('Error uploading images:', error);
+      alert('An error occurred while uploading the images');
     }
-
-    setImagePreview({ ...imagePreview, [imageType]: newImages });
   };
+
 
   // Remove selected image
   const handleImageRemove = (imageType, imageUrl) => {
@@ -103,14 +145,29 @@ function Editpage() {
 
   // Save changes to the project via the API
   const handleSave = async () => {
+
+    const datatosubmit = {
+      ...project,
+      image_banner: imagePreview.image_banner,
+      main_image: imagePreview.main_image,
+      floorplan: imagePreview.floorplan,
+      office_image: imagePreview.office_image,
+      retail_shop: imagePreview.retail_shop,
+      restaurant: imagePreview.restaurant,
+      other: imagePreview.other
+    }
+    console.log(datatosubmit)
     try {
-      await axios.put(`https://www.townmanor.ai/api/api/commercial/commercial-details/${id}`, {
-        ...project,
-        amenities: JSON.stringify(amenities),
-        distance: JSON.stringify(distances),
-      });
-      alert("Project updated successfully!");
-      navigate('/');  // Navigate back to the main page after saving
+      const response = await axios.put(`https://www.townmanor.ai/api/api/commercial/commercial-details/${id}`, datatosubmit)
+
+      if (response.status === 200) {
+        alert("Project updated successfully!");
+        // You can add navigation here if needed
+        // For example, redirect to a different page after success
+        // history.push('/your-redirect-page'); // If using react-router
+      } else {
+        alert("There was an issue updating the project.");
+      }// Navigate back to the main page after saving
     } catch (error) {
       console.error("Error saving project data:", error);
       alert("There was an error saving the project.");
@@ -122,7 +179,7 @@ function Editpage() {
 
   return (
     <div className="edit-page-container">
-      <div className="form-container" style={{ textAlign: 'left' }}>
+      <div className="form-containeredit" style={{ textAlign: 'left' }}>
         <div>
           <h3>Edit Project: {project.project_name}</h3>
         </div>
@@ -240,7 +297,7 @@ function Editpage() {
           </div>
 
           {/* Amenities Section */}
-          
+
           <div className="form-group">
             <label>Amenities</label>
             <div className="amenities-list">
@@ -259,29 +316,35 @@ function Editpage() {
             </div>
           </div>
 
-          {/* Distance Section */}
+
           <div className="form-group">
             <label>Distances</label>
-            {distances.map((distance, index) => (
-              <div key={index} className="distance-item" style={{display:'flex',marginBottom:'5px'}}>
-                <input style={{width:'300px',fontWeight:'500',border:'none'}}
-                  type="text"
-                  className="form-control"
-                  name="name"
-                  placeholder="Place Name"
-                  value={distance.name}
-                  onChange={(e) => handleDistanceChange(e, index)}
-                />
-                <input style={{width:'300px'}}
-                  type="text"
-                  className="form-control"
-                  name="distance"
-                  placeholder="Distance"
-                  value={distance.distance}
-                  onChange={(e) => handleDistanceChange(e, index)}
-                />
-              </div>
-            ))}
+            {Array.isArray(distances) && distances.length > 0 ? (
+              distances.map((distance, index) => (
+                <div key={index} className="distance-item" style={{ display: 'flex', marginBottom: '5px' }}>
+                  <input
+                    style={{ width: '300px', fontWeight: '500', border: 'none' }}
+                    type="text"
+                    className="form-control"
+                    name="name"
+                    placeholder="Place Name"
+                    value={distance.name}
+                    onChange={(e) => handleDistanceChange(e, index)}
+                  />
+                  <input
+                    style={{ width: '300px' }}
+                    type="text"
+                    className="form-control"
+                    name="distance"
+                    placeholder="Distance"
+                    value={distance.distance}
+                    onChange={(e) => handleDistanceChange(e, index)}
+                  />
+                </div>
+              ))
+            ) : (
+              <p>No distances available</p> // Fallback when distances is empty or not an array
+            )}
           </div>
 
           {/* Image Sections */}
@@ -290,9 +353,9 @@ function Editpage() {
             <label>Upload Image Banner</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'image_banner')} />
             <div className="image-preview-container">
-              {imagePreview.image_banner.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.image_banner) && imagePreview.image_banner.length > 0 && imagePreview.image_banner.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('image_banner', imageUrl)}>✖</span>
                 </div>
               ))}
@@ -304,9 +367,9 @@ function Editpage() {
             <label>Upload Main Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'main_image')} />
             <div className="image-preview-container">
-              {imagePreview.main_image.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.main_image) && imagePreview.main_image.length > 0 && imagePreview.main_image.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('main_image', imageUrl)}>✖</span>
                 </div>
               ))}
@@ -318,9 +381,9 @@ function Editpage() {
             <label>Upload Floorplan Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'floorplan')} />
             <div className="image-preview-container">
-              {imagePreview.floorplan.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.floorplan) && imagePreview.floorplan.length > 0 &&imagePreview.floorplan.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('floorplan', imageUrl)}>✖</span>
                 </div>
               ))}
@@ -332,9 +395,9 @@ function Editpage() {
             <label>Upload Office Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'office_image')} />
             <div className="image-preview-container">
-              {imagePreview.office_image.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.office_image) && imagePreview.office_image.length > 0 &&imagePreview.office_image.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('office_image', imageUrl)}>✖</span>
                 </div>
               ))}
@@ -346,9 +409,9 @@ function Editpage() {
             <label>Upload Retail Shop Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'retail_shop')} />
             <div className="image-preview-container">
-              {imagePreview.retail_shop.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.retail_shop) && imagePreview.retail_shop.length > 0 &&imagePreview.retail_shop.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('retail_shop', imageUrl)}>✖</span>
                 </div>
               ))}
@@ -360,15 +423,27 @@ function Editpage() {
             <label>Upload Restaurant Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'restaurant')} />
             <div className="image-preview-container">
-              {imagePreview.restaurant.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.restaurant) && imagePreview.restaurant.length > 0 &&imagePreview.restaurant.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
-                  <img src={imageUrl} alt="" className="image-preview" />
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('restaurant', imageUrl)}>✖</span>
                 </div>
               ))}
             </div>
           </div>
-
+          {/* other */}
+          <div className="form-group">
+            <label>other Images</label>
+            <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'other')} />
+            <div className="image-preview-container">
+              {Array.isArray(imagePreview.other) && imagePreview.other.length > 0 &&imagePreview.other.map((imageUrl, index) => (
+                <div key={index} className="image-preview-item">
+                  <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
+                  <span className="image-remove" onClick={() => handleImageRemove('restaurant', imageUrl)}>✖</span>
+                </div>
+              ))}
+            </div>
+          </div>
           {/* Save/Cancel Buttons */}
           <div className="form-row">
             <button type="button" className="btn btn-success" onClick={handleSave}>

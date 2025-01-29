@@ -17,6 +17,8 @@ import Commercial from './Component/Commercial/Commercial'
 import AgentLogin from './Component/Agent&Blog/AgentLogin'
 import BlockAgent from './Component/Agent&Blog/BlockAgent'
 import Articleblog from './Component/Agent&Blog/Articleblog'
+import CommTabel from './Component/Commercial/CommTabel'
+import Editpage from './Component/Commercial/Editpage'
 function App() {
   
 
@@ -34,9 +36,12 @@ function App() {
       <Route path="/HomeInterior" element={<HomeInterior />} />
       <Route path="/HomeLoan" element={<HomeLoan/>}></Route>
       <Route path="/Commercial" element={<Commercial/>}></Route>
+      <Route path="/commercialdashboard" element={<CommTabel/>}></Route>
+      <Route path="/edit/:id" element={<Editpage/>}></Route>
       <Route path="/agentLogin" element={<AgentLogin />} />
           <Route path="/blockAgent" element={<BlockAgent />} />
-          <Route path="/blockArtica/:index" element={<Articleblog />} />   
+          <Route path="/blockArtica/:index" element={<Articleblog />} />  
+       
       </Routes>
     </Router>
    {/* <AdminAccesor/>  */}
