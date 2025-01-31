@@ -1,33 +1,51 @@
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminAccesor from '../AdminAccesor';
 import './Agent.css';
-import dummy from './Agent.json';
+import axios from 'axios';
 
 function Agent() {
     // Initial data is passed from the JSON file
-    const [data, setData] = useState(dummy);
+    const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5; // Number of items per page
+  
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://www.townmanor.ai/api/blogs');
+                setData(response.data); // Ensure we set the actual data from response
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
     // Handle delete functionality
-    const deleteItem = (id) => {
-        if (window.confirm('Are you sure you want to delete this item?')) {
-            const updatedData = data.filter(item => item.id !== id);
-            setData(updatedData);
+    const deleteItem = async (id) => {
+        alert("are sure want to delete");
+        try {
+            const response = await axios.delete(`https://www.townmanor.ai/api/blogs/${id}`);
+            if (response.status === 200) {
+                // Optimistically remove the item from the UI
+                const updatedData = data.filter(item => item.id !== id);
+                setData(updatedData);
+                alert('Item deleted successfully!');
+            }
+        } catch (error) {
+            console.error("Error fetching data:", error);
         }
     };
 
-    // Handle edit functionality - open modal and update the context, date, and image
+    // Handle edit functionality
     const [editedItem, setEditedItem] = useState(null);
-    const [showModal, setShowModal] = useState(false); // Manage modal visibility
+    const [showModal, setShowModal] = useState(false);
     const [imagePreview, setImagePreview] = useState(null); // For image preview
 
-    const handleEdit = (item, event) => {
-        event.preventDefault();  // Prevent form submission and page refresh
-        setEditedItem(item);  // Set the item data to be edited
+    const handleEdit = (item) => {
+        setEditedItem(item);
         setImagePreview(item.img); // Set the initial preview to the current image
-        setShowModal(true);  // Open the modal
+        setShowModal(true);
     };
 
     const handleSave = () => {
@@ -35,7 +53,7 @@ function Agent() {
             item.id === editedItem.id ? editedItem : item
         );
         setData(updatedData);
-        setShowModal(false);  // Close the modal after saving
+        setShowModal(false);
     };
 
     const handleChange = (e) => {
@@ -50,16 +68,15 @@ function Agent() {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            // Create a local image preview URL
             const reader = new FileReader();
             reader.onloadend = () => {
-                setImagePreview(reader.result); // Set the image preview URL
+                setImagePreview(reader.result);
                 setEditedItem((prev) => ({
                     ...prev,
-                    img: reader.result // Store the image file as a base64 string (for local usage)
+                    img: reader.result
                 }));
             };
-            reader.readAsDataURL(file); // Convert the file to base64
+            reader.readAsDataURL(file);
         }
     };
 
@@ -71,15 +88,10 @@ function Agent() {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    // Modal state for login
-    const [showLoginModal, setShowLoginModal] = useState(false);
-
     return (
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <div>
-                <AdminAccesor />
-            </div>
-            <div className='AgentWorking'>
+            <AdminAccesor />
+            <div className="AgentWorking">
                 <div style={{ display: 'flex' }}>
                     <h1 className="Agent_id">Article/Blog Dashboard</h1>
                 </div>
@@ -105,7 +117,7 @@ function Agent() {
                                         <th scope="row">{item.id}</th>
                                         <td>
                                             <img
-                                                src={item.img}
+                                                src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/blog-image'+item.img}
                                                 alt="Image"
                                                 id="Agent_mg"
                                                 className="img-fluid"
@@ -115,7 +127,7 @@ function Agent() {
                                         <td>{item.data}</td>
                                         <td>{item.date}</td>
                                         <td>
-                                            <button className="btn btn-warning btn-sm" onClick={(e) => handleEdit(item, e)}>
+                                            <button className="btn btn-warning btn-sm" onClick={() => handleEdit(item)}>
                                                 Edit
                                             </button>
                                         </td>
@@ -208,7 +220,7 @@ function Agent() {
                                         {imagePreview && (
                                             <div className="mt-2">
                                                 <img
-                                                    src={imagePreview}
+                                                    src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/blog-image'+imagePreview}
                                                     alt="Preview"
                                                     style={{ width: '150px', height: '100px' }}
                                                     className="img-fluid"

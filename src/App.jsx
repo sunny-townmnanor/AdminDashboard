@@ -19,6 +19,7 @@ import BlockAgent from './Component/Agent&Blog/BlockAgent'
 import Articleblog from './Component/Agent&Blog/Articleblog'
 import CommTabel from './Component/Commercial/CommTabel'
 import Editpage from './Component/Commercial/Editpage'
+import UploadBlog from './Component/Agent&Blog/UploadBlog'
 function App() {
   
 
@@ -41,7 +42,7 @@ function App() {
       <Route path="/agentLogin" element={<AgentLogin />} />
           <Route path="/blockAgent" element={<BlockAgent />} />
           <Route path="/blockArtica/:index" element={<Articleblog />} />  
-       
+          <Route path="/uploadblog" element={<UploadBlog />} />
       </Routes>
     </Router>
    {/* <AdminAccesor/>  */}

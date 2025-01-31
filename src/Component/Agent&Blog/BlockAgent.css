@@ -1,18 +1,9 @@
 /* App.css */
 
 /* Global Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-}
 
-.App {
-  text-align: center;
-  color: #333;
-}
+
+
 
 /* Header Styles */
 
@@ -66,7 +57,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
-  height: 77vh;
+  height: 60vh;
   /* border: 1px solid black; */
 }
 
@@ -101,7 +92,7 @@ body {
   font-size: 1.3rem;
   margin-top: 5px;
   margin-left: -37px;
-  color:blueviolet;
+  color:#bf2e2e;
 }
 
 .para1 {
@@ -115,7 +106,7 @@ body {
 ;
   font-size: 1rem;
   font-weight: bold;
-  color: blueviolet;
+  color: #bf2e2e;
   text-decoration: none;
   padding: 1px 7px;
   border-radius: 5px;
@@ -147,7 +138,7 @@ body {
 }
 
 .pagination-button {
-  background-color: blueviolet;
+  background-color: #bf2e2e;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -163,8 +154,8 @@ body {
 
 .pagination-number {
   background-color: #fff;
-  color: blueviolet;
-  border: 1px solid blueviolet;
+  color: #bf2e2e;
+  border: 1px solid #bf2e2e;
   padding: 10px 15px;
   margin: 0 5px;
   cursor: pointer;
@@ -172,7 +163,7 @@ body {
 }
 
 .pagination-number.active {
-  background-color: blueviolet;
+  background-color: #bf2e2e;
   color: white;
 }
 
@@ -198,7 +189,7 @@ body {
 .feature-card img {
   transition: transform 0.3s ease-in-out;
   max-width: 100%;
-  height: auto;
+  height: 30vh;
 }
 
 .feature-card img:hover {
