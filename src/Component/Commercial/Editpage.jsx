@@ -301,7 +301,7 @@ function Editpage() {
           <div className="form-group">
             <label>Amenities</label>
             <div className="amenities-list">
-              {["Air conditioning", "Swimming Pool", "Internet", "Dishwasher", "MicroWave", "Intercomm Facility", "Gas Pipeline", "Gymnasium", "Parking", "Power Backup", "CCTV", "24 x 7 Security", "Court", "ClubHouse", "PlayArea", "GuestParking"].map((amenity, index) => (
+              {["Air conditioning","power Backup", "Swimming Pool", "Internet", "Dishwasher", "MicroWave", "Intercomm Facility","Gas Pipeline", "Gymnasium", "Parking","Restuarant", "CCTV","lift","Atm", "24*7 Water Supply", "Court", "ClubHouse", "PlayArea", "GuestParking","24*7 Security"].map((amenity, index) => (
                 <div key={index} className="form-check">
                   <input
                     type="checkbox"

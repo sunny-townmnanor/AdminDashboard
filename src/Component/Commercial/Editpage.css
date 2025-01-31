@@ -81,3 +81,7 @@
     font-weight: bold;
   }
   
+  .form-check-input[type=checkbox] {
+    border-radius: 0;
+    width: fit-content;
+}
