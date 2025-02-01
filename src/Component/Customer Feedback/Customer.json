@@ -1,0 +1,137 @@
+[
+    {
+        "propertyid": 1,
+        "username": "priya",
+        "contact": "891234789",
+        "rating": "1",
+        "status": "0",
+        "createdAt": "23:20 29 May 2020",
+        "updatedAt": "24:15 4 March 2000"
+    },
+    {
+        "propertyid": 2,
+        "username": "ajay",
+        "contact": "982345678",
+        "rating": "5",
+        "status": "1",
+        "createdAt": "10:15 10 June 2021",
+        "updatedAt": "14:30 5 August 2022"
+    },
+    {
+        "propertyid": 3,
+        "username": "sanya",
+        "contact": "900123456",
+        "rating": "4",
+        "status": "1",
+        "createdAt": "15:00 17 July 2019",
+        "updatedAt": "11:40 11 November 2021"
+    },
+    {
+        "propertyid": 4,
+        "username": "krishna",
+        "contact": "770012345",
+        "rating": "2",
+        "status": "0",
+        "createdAt": "18:30 25 December 2020",
+        "updatedAt": "19:45 9 March 2022"
+    },
+    {
+        "propertyid": 5,
+        "username": "nisha",
+        "contact": "889876543",
+        "rating": "1",
+        "status": "1",
+        "createdAt": "8:00 1 January 2023",
+        "updatedAt": "13:25 2 February 2023"
+    },
+    {
+        "propertyid": 6,
+        "username": "rajesh",
+        "contact": "940123456",
+        "rating": "4",
+        "status": "0",
+        "createdAt": "12:00 20 May 2022",
+        "updatedAt": "16:10 14 September 2023"
+    },
+    {
+        "propertyid": 7,
+        "username": "deepika",
+        "contact": "987654321",
+        "rating": "4",
+        "status": "0",
+        "createdAt": "2:30 13 March 2021",
+        "updatedAt": "10:15 30 June 2023"
+    },
+    {
+        "propertyid": 8,
+        "username": "rohit",
+        "contact": "912345678",
+        "rating": "3",
+        "status": "1",
+        "createdAt": "16:45 5 February 2020",
+        "updatedAt": "17:50 10 May 2021"
+    },
+    {
+        "propertyid": 9,
+        "username": "meera",
+        "contact": "993456789",
+        "rating": "2",
+        "status": "1",
+        "createdAt": "14:30 18 April 2022",
+        "updatedAt": "20:00 11 August 2023"
+    },
+    {
+        "propertyid": 10,
+        "username": "vikram",
+        "contact": "874567890",
+        "rating": "2",
+        "status": "0",
+        "createdAt": "9:15 23 September 2019",
+        "updatedAt": "8:00 15 December 2020"
+    },
+    {
+        "propertyid": 11,
+        "username": "manish",
+        "contact": "812345678",
+        "rating": "1",
+        "status": "1",
+        "createdAt": "19:00 5 October 2021",
+        "updatedAt": "12:20 7 January 2022"
+    },
+    {
+        "propertyid": 12,
+        "username": "rani",
+        "contact": "990876543",
+        "rating": "3",
+        "status": "1",
+        "createdAt": "11:45 6 November 2020",
+        "updatedAt": "13:15 10 March 2022"
+    },
+    {
+        "propertyid": 13,
+        "username": "sudhir",
+        "contact": "865432109",
+        "rating": "4",
+        "status": "0",
+        "createdAt": "7:30 9 February 2021",
+        "updatedAt": "14:30 20 April 2023"
+    },
+    {
+        "propertyid": 14,
+        "username": "komal",
+        "contact": "945612789",
+        "rating": "3",
+        "status": "0",
+        "createdAt": "16:00 15 October 2021",
+        "updatedAt": "22:15 8 July 2022"
+    },
+    {
+        "propertyid": 15,
+        "username": "arvind",
+        "contact": "907612345",
+        "rating": "5",
+        "status": "1",
+        "createdAt": "13:00 2 December 2022",
+        "updatedAt": "17:30 17 March 2023"
+    }
+]
