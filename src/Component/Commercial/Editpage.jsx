@@ -86,36 +86,21 @@ function Editpage() {
 
 
   const handleImageUpload = async (e, imageType) => {
-    const files = Array.from(e.target.files); // Convert the FileList to an array
-    // Keep previous images for the given type
+    const files = Array.from(e.target.files);
 
-    // Optional: Add a file limit (e.g., 10 images)
-    // Uncomment this block if you want to enforce a file limit.
-    // if (files.length + newImages.length > 10) {
-    //   alert('You can upload up to 10 images.');
-    //   files.splice(0, files.length - (10 - newImages.length)); // Keep only the allowed files
-    // }
-
-    // Prepare FormData for image upload
     const formData = new FormData();
     files.forEach(file => {
-      formData.append('images', file); // 'images' is the key expected by the backend
+      formData.append('images', file);
     });
 
-    // Generate previews for the new images
-
-
     try {
-      // Upload images to the backend (replace with your own API endpoint)
       const response = await axios.post('https://www.townmanor.ai/api/image/aws-upload-commercial-images', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
-      // Check if the upload was successful
       if (response.status === 200) {
         const uploadedImagePaths = response.data.fileUrls;
 
-        // Optionally clean up the image paths if needed
         const trimmedImagePaths = uploadedImagePaths.map(path => {
           return path.replace("https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/", "");
         });
@@ -301,7 +286,7 @@ function Editpage() {
           <div className="form-group">
             <label>Amenities</label>
             <div className="amenities-list">
-              {["Air conditioning","power Backup", "Swimming Pool", "Internet", "Dishwasher", "MicroWave", "Intercomm Facility","Gas Pipeline", "Gymnasium", "Parking","Restuarant", "CCTV","lift","Atm", "24*7 Water Supply", "Court", "ClubHouse", "PlayArea", "GuestParking","24*7 Security"].map((amenity, index) => (
+              {["Air conditioning", "power Backup", "Swimming Pool", "Internet", "Dishwasher", "MicroWave", "Intercomm Facility", "Gas Pipeline", "Gymnasium", "Parking", "Restuarant", "CCTV", "lift", "Atm", "24*7 Water Supply", "Court", "ClubHouse", "PlayArea", "GuestParking", "24*7 Security"].map((amenity, index) => (
                 <div key={index} className="form-check">
                   <input
                     type="checkbox"
@@ -381,7 +366,7 @@ function Editpage() {
             <label>Upload Floorplan Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'floorplan')} />
             <div className="image-preview-container">
-              {Array.isArray(imagePreview.floorplan) && imagePreview.floorplan.length > 0 &&imagePreview.floorplan.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.floorplan) && imagePreview.floorplan.length > 0 && imagePreview.floorplan.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
                   <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('floorplan', imageUrl)}>✖</span>
@@ -395,7 +380,7 @@ function Editpage() {
             <label>Upload Office Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'office_image')} />
             <div className="image-preview-container">
-              {Array.isArray(imagePreview.office_image) && imagePreview.office_image.length > 0 &&imagePreview.office_image.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.office_image) && imagePreview.office_image.length > 0 && imagePreview.office_image.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
                   <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('office_image', imageUrl)}>✖</span>
@@ -409,7 +394,7 @@ function Editpage() {
             <label>Upload Retail Shop Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'retail_shop')} />
             <div className="image-preview-container">
-              {Array.isArray(imagePreview.retail_shop) && imagePreview.retail_shop.length > 0 &&imagePreview.retail_shop.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.retail_shop) && imagePreview.retail_shop.length > 0 && imagePreview.retail_shop.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
                   <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('retail_shop', imageUrl)}>✖</span>
@@ -423,7 +408,7 @@ function Editpage() {
             <label>Upload Restaurant Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'restaurant')} />
             <div className="image-preview-container">
-              {Array.isArray(imagePreview.restaurant) && imagePreview.restaurant.length > 0 &&imagePreview.restaurant.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.restaurant) && imagePreview.restaurant.length > 0 && imagePreview.restaurant.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
                   <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('restaurant', imageUrl)}>✖</span>
@@ -436,7 +421,7 @@ function Editpage() {
             <label>other Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'other')} />
             <div className="image-preview-container">
-              {Array.isArray(imagePreview.other) && imagePreview.other.length > 0 &&imagePreview.other.map((imageUrl, index) => (
+              {Array.isArray(imagePreview.other) && imagePreview.other.length > 0 && imagePreview.other.map((imageUrl, index) => (
                 <div key={index} className="image-preview-item">
                   <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' + imageUrl} alt="" className="image-preview" />
                   <span className="image-remove" onClick={() => handleImageRemove('restaurant', imageUrl)}>✖</span>

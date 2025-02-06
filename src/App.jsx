@@ -21,6 +21,8 @@ import CommTabel from './Component/Commercial/CommTabel'
 import Editpage from './Component/Commercial/Editpage'
 import UploadBlog from './Component/Agent&Blog/UploadBlog'
 import Customer from './Component/Customer Feedback/Customer'
+import PaymentPlan from './Component/Commercial/PaymentPlan'
+import PaymentPlanEdit from './Component/Commercial/PaymentPlanEdit'
 function App() {
 
 
@@ -45,6 +47,8 @@ function App() {
           <Route path="/blockArtica/:index" element={<Articleblog />} />
           <Route path="/uploadblog" element={<UploadBlog />} />
           <Route path="/customer" element={<Customer/>}/>
+          <Route path="/paymentPlan/:id" element={<PaymentPlan/>}/>
+          <Route path="/paymentPlanEdit/:id/:id" element={<PaymentPlanEdit/>}/>
         </Routes>
       </Router>
       {/* <AdminAccesor/>  */}

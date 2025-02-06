@@ -112,6 +112,7 @@ function CommTabel() {
                     <th scope="col">City</th>
                     <th scope="col">Investment</th>
                     <th scope="col">Return</th>
+                    <th scope="col">Payment Plan</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                   </tr>
@@ -141,6 +142,17 @@ function CommTabel() {
                         <td>{item.city}</td>
                         <td>{item.invest}</td>
                         <td>{item.return_policy}</td>
+                        <td>
+                          <button
+                            type="button"
+                            className='btn btn-secondary'
+                            onClick={() => {
+                              navigate(`/paymentplan/${item.id}`);
+                            }}
+                          >
+                            Check
+                          </button>
+                        </td>
                         <td>
                           <button
                             type="button"
