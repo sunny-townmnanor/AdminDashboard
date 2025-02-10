@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "UserName": "JohnDoe",
+        "PackageType": "Premium",
+        "Price": "$29.99",
+        "OldPackageHistory": [
+            {
+                "PackageName": "Basic",
+                "Price": "$9.99",
+                "Duration": "1 Month"
+            },
+            {
+                "PackageName": "Standard",
+                "Price": "$19.99",
+                "Duration": "3 Months"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "UserName": "JaneSmith",
+        "PackageType": "Standard",
+        "Price": "$19.99",
+        "OldPackageHistory": [
+            {
+                "PackageName": "Basic",
+                "Price": "$9.99",
+                "Duration": "2 Months"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "UserName": "MikeBrown",
+        "PackageType": "Basic",
+        "Price": "$9.99",
+        "OldPackageHistory": []
+    },
+    {
+        "id": 4,
+        "UserName": "SarahWilson",
+        "PackageType": "Premium",
+        "Price": "$29.99",
+        "OldPackageHistory": [
+            {
+                "PackageName": "Standard",
+                "Price": "$19.99",
+                "Duration": "2 Months"
+            }
+        ]
+    }
+]

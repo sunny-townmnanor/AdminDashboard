@@ -1,0 +1,102 @@
+/* Subscription.css */
+
+.table {
+    width: 70%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table thead {
+    background-color: #f8f9fa;
+  }
+  
+  .table th {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  .table .thead-dark th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table .thead-light th {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  .table .table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .table .table-bordered th,
+  .table .table-bordered td {
+    border: 1px solid #ddd;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 2vh auto;
+    text-align: center;
+  }
+  .main-hd{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 10px;
+    justify-content: center;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px; 
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); 
+}
+
+button:focus {
+  outline: none; 
+}
+
+button:active {
+  transform: translateY(2px); 
+}
+
+button svg {
+  margin-right: 10px; 
+}
+
+.head-subscription{
+  width: 100%;
+}
