@@ -23,6 +23,7 @@ import UploadBlog from './Component/Agent&Blog/UploadBlog'
 import Customer from './Component/Customer Feedback/Customer'
 import PaymentPlan from './Component/Commercial/PaymentPlan'
 import PaymentPlanEdit from './Component/Commercial/PaymentPlanEdit'
+import AgentFeature from './Component/Agent_ feature/Agent_feature'
 function App() {
 
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/customer" element={<Customer/>}/>
           <Route path="/paymentPlan/:id" element={<PaymentPlan/>}/>
           <Route path="/paymentPlanEdit/:id/:id" element={<PaymentPlanEdit/>}/>
+          <Route path="/agentfeature" element={<AgentFeature/>}/>
         </Routes>
       </Router>
       {/* <AdminAccesor/>  */}

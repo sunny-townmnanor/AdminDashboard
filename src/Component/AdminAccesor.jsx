@@ -18,7 +18,7 @@ function AdminAccesor() {
    <a href='/commercialdashboard'><span>Commercial Dashboard</span></a> 
     <span>package & subscription</span>
     <span>Subscription management </span>
-    <span>Agent Spotlight & featured Agent</span>
+    <a href='/agentfeature'><span>Agent Spotlight & featured Agent</span></a> 
     <span>Market Workplace</span>
     <span>Customer Feedback</span>
    </div>

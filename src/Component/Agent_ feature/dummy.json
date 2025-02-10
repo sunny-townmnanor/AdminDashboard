@@ -1,0 +1,138 @@
+[
+    {
+      "id": 1,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151219997.jpg",
+      "nameSurname": "John Doe",
+      "agentUrl": "/agent/john-doe",
+      "address": "123 Main St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2018-04-15\"}",
+      "totalListingsNum": 10
+    },
+    {
+      "id": 2,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151219998.jpg",
+      "nameSurname": "Jane Smith",
+      "agentUrl": "/agent/jane-smith",
+      "address": "456 Oak St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2017-03-10\"}",
+      "totalListingsNum": 15
+    },
+    {
+      "id": 3,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151219999.jpg",
+      "nameSurname": "Alice Johnson",
+      "agentUrl": "/agent/alice-johnson",
+      "address": "789 Pine St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2016-06-25\"}",
+      "totalListingsNum": 8
+    },
+    {
+      "id": 4,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220000.jpg",
+      "nameSurname": "Robert Brown",
+      "agentUrl": "/agent/robert-brown",
+      "address": "321 Elm St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2015-09-05\"}",
+      "totalListingsNum": 5
+    },
+    {
+      "id": 5,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220001.jpg",
+      "nameSurname": "Michael Davis",
+      "agentUrl": "/agent/michael-davis",
+      "address": "654 Maple St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2014-01-10\"}",
+      "totalListingsNum": 12
+    },
+    {
+      "id": 6,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220002.jpg",
+      "nameSurname": "Sophia Garcia",
+      "agentUrl": "/agent/sophia-garcia",
+      "address": "987 Birch St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2019-11-12\"}",
+      "totalListingsNum": 20
+    },
+    {
+      "id": 7,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220003.jpg",
+      "nameSurname": "William Martinez",
+      "agentUrl": "/agent/william-martinez",
+      "address": "135 Cedar St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2020-02-18\"}",
+      "totalListingsNum": 18
+    },
+    {
+      "id": 8,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220004.jpg",
+      "nameSurname": "Isabella Rodriguez",
+      "agentUrl": "/agent/isabella-rodriguez",
+      "address": "246 Redwood St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2018-12-22\"}",
+      "totalListingsNum": 22
+    },
+    {
+      "id": 9,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220005.jpg",
+      "nameSurname": "Elijah Wilson",
+      "agentUrl": "/agent/elijah-wilson",
+      "address": "369 Fir St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2017-05-30\"}",
+      "totalListingsNum": 30
+    },
+    {
+      "id": 10,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220006.jpg",
+      "nameSurname": "Olivia Clark",
+      "agentUrl": "/agent/olivia-clark",
+      "address": "741 Willow St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2021-07-08\"}",
+      "totalListingsNum": 6
+    },
+    {
+      "id": 11,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220007.jpg",
+      "nameSurname": "Daniel Lewis",
+      "agentUrl": "/agent/daniel-lewis",
+      "address": "159 Aspen St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2019-04-10\"}",
+      "totalListingsNum": 14
+    },
+    {
+      "id": 12,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220008.jpg",
+      "nameSurname": "Amelia Walker",
+      "agentUrl": "/agent/amelia-walker",
+      "address": "852 Oakwood St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2016-02-13\"}",
+      "totalListingsNum": 11
+    },
+    {
+      "id": 13,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220009.jpg",
+      "nameSurname": "James Hall",
+      "agentUrl": "/agent/james-hall",
+      "address": "963 Maplewood St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2015-03-29\"}",
+      "totalListingsNum": 25
+    },
+    {
+      "id": 14,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220010.jpg",
+      "nameSurname": "Charlotte Allen",
+      "agentUrl": "/agent/charlotte-allen",
+      "address": "741 Birchwood St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2020-06-11\"}",
+      "totalListingsNum": 16
+    },
+    {
+      "id": 15,
+      "imageUrl": "/112x89celebration_navratri_deity_23_2151220011.jpg",
+      "nameSurname": "Benjamin Young",
+      "agentUrl": "/agent/benjamin-young",
+      "address": "258 Pinewood St, City",
+      "agentProfile": "{\"activated\": true, \"registrationDate\": \"2021-01-14\"}",
+      "totalListingsNum": 9
+    }
+  ]
+  
