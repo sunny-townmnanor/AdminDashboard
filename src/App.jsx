@@ -25,6 +25,7 @@ import PaymentPlan from './Component/Commercial/PaymentPlan'
 import PaymentPlanEdit from './Component/Commercial/PaymentPlanEdit'
 import AgentFeature from './Component/Agent_ feature/Agent_feature'
 import Subscription from './Component/Payment&Subscription/Subscription'
+import UserEditpage from './Component/Commercial/User/UserEditpage'
 function App() {
 
 
@@ -53,7 +54,8 @@ function App() {
           <Route path="/paymentPlanEdit/:id/:id" element={<PaymentPlanEdit/>}/>
           <Route path="/agentfeature" element={<AgentFeature/>}/>
           <Route path='/Subscription' element={<Subscription/>}/>
-        </Routes>
+          <Route path='/useredit/:id' element={<UserEditpage/>}/>
+        </Routes> 
       </Router>
       {/* <AdminAccesor/>  */}
       {/* <Property/> */}

@@ -114,6 +114,7 @@ function CommTabel() {
                     <th scope="col">Return</th>
                     <th scope="col">Payment Plan</th>
                     <th scope="col">Edit</th>
+                    <th scope='col'>User Edit</th>
                     <th scope="col">Delete</th>
                   </tr>
                 </thead>
@@ -123,18 +124,7 @@ function CommTabel() {
                       <tr key={item.id} style={{ textAlign: 'center' }}>
                         <td>{item.id}</td>
                         <td>
-                          <img
-                            src={
-                              'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' +
-                              item.face_image
-                            }
-                            style={{
-                              width: '10vw',
-                              height: '11vh',
-                              borderRadius: '7px',
-                            }}
-                            alt={item.project_name}
-                          />
+                          <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/' +item.face_image} style={{width: '10vw',height: '11vh',borderRadius: '7px',}} alt={item.project_name}/>
                         </td>
                         <td>{item.project_name}</td>
                         <td>{item.builder}</td>
@@ -143,35 +133,16 @@ function CommTabel() {
                         <td>{item.invest}</td>
                         <td>{item.return_policy}</td>
                         <td>
-                          <button
-                            type="button"
-                            className='btn btn-secondary'
-                            onClick={() => {
-                              navigate(`/paymentplan/${item.id}`);
-                            }}
-                          >
-                            Check
-                          </button>
+                          <button type="button" className='btn btn-secondary' onClick={() => {navigate(`/paymentplan/${item.id}`);}}>Check</button>
                         </td>
                         <td>
-                          <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => {
-                              navigate(`/edit/${item.id}`);
-                            }}
-                          >
-                            Edit
-                          </button>
+                          <button type="button" className="btn btn-primary"onClick={() => {navigate(`/edit/${item.id}`);}}>Edit</button>
                         </td>
                         <td>
-                          <button
-                            type="button"
-                            className="btn btn-danger"
-                            onClick={() => handelChange(item.id)}
-                          >
-                            Delete
-                          </button>
+                          <button type='button' className='btn btn-light' onClick={()=>{navigate(`/useredit/${item.id}`)}}>UserEdit</button>
+                        </td>
+                        <td>
+                          <button type="button" className="btn btn-danger" onClick={() => handelChange(item.id)}>Delete</button>
                         </td>
                       </tr>
                     ))}
