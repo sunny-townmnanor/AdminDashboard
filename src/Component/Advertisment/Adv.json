@@ -1,0 +1,124 @@
+[
+    {
+      "id": 1,
+      "imgname": "Spring Sale",
+      "type": "homepage",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more3.jpeg",
+      "createdAt": "2025-02-06T12:00:54.000Z",
+      "Url":"https://townmanor.ai/"
+    },
+    {
+      "id": 2,
+      "imgname": "Winter Discount",
+      "type": "homepage",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more4.jpeg",
+      "createdAt": "2025-02-07T10:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "imgname": "New Year Offer",
+      "type": "commercial",
+      "status": "inactive",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-New-Year-Offer.png"],
+      "createdAt": "2025-01-01T09:15:30.000Z"
+    },
+    {
+      "id": 4,
+      "imgname": "Flash Sale",
+      "type": "paymentplan",
+      "status": "active",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Flash-Sale.png"],
+      "createdAt": "2025-02-05T14:45:20.000Z"
+    },
+    {
+      "id": 5,
+      "imgname": "Diwali Bonanza",
+      "type": "commercial",
+      "status": "active",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Diwali-Bonanza.png"],
+      "createdAt": "2024-10-25T08:10:45.000Z"
+    },
+    {
+      "id": 6,
+      "imgname": "Mega Clearance Sale",
+      "type": "homepage",
+      "status": "inactive",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more8.jpg"],
+      "createdAt": "2024-12-15T11:20:30.000Z"
+    },
+    {
+      "id": 7,
+      "imgname": "Festival Offer",
+      "type": "paymentplan",
+      "status": "active",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Festival-Offer.png"],
+      "createdAt": "2024-11-10T13:05:50.000Z"
+    },
+    {
+      "id": 8,
+      "imgname": "Grand Opening Sale",
+      "type": "commercial",
+      "status": "inactive",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Grand-Opening-Sale.png"],
+      "createdAt": "2024-09-15T10:20:00.000Z"
+    },
+    {
+      "id": 9,
+      "imgname": "Black Friday Deals",
+      "type": "homepage",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more5.jpg",
+      "createdAt": "2024-11-29T09:45:30.000Z"
+    },
+    {
+      "id": 10,
+      "imgname": "Cyber Monday Sale",
+      "type": "commercial",
+      "status": "inactive",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Cyber-Monday-Sale.png"],
+      "createdAt": "2024-12-02T12:30:15.000Z"
+    },
+    {
+      "id": 11,
+      "imgname": "Exclusive Discount",
+      "type": "paymentplan",
+      "status": "active",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Exclusive-Discount.png"],
+      "createdAt": "2025-02-01T11:15:40.000Z"
+    },
+    {
+      "id": 12,
+      "imgname": "Christmas Special",
+      "type": "homepage",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more6.jpg",
+      "createdAt": "2024-12-25T08:05:20.000Z"
+    },
+    {
+      "id": 13,
+      "imgname": "Republic Day Offer",
+      "type": "commercial",
+      "status": "inactive",
+      "imageUrl": ["https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Republic-Day-Offer.png"],
+      "createdAt": "2025-01-26T09:55:10.000Z"
+    },
+    {
+      "id": 14,
+      "imgname": "Independence Day Sale",
+      "type": "paymentplan",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads/1738843254643-Independence-Day-Sale.png",
+      "createdAt": "2024-08-15T07:45:30.000Z"
+    },
+    {
+      "id": 15,
+      "imgname": "Monsoon Bonanza",
+      "type": "homepage",
+      "status": "active",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/townamnor.ai/ads-image/townmanor_discover_more7.jpeg",
+      "createdAt": "2024-07-10T10:20:45.000Z"
+    }
+  ]
+  

@@ -39,6 +39,10 @@
     /* text-align: center; */
     justify-content: center;
 }
+.proptablehead{
+  text-align: center;
+  margin-top: 40px;
+}
 #navigation {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +74,7 @@
     outline: none;
   }
   
-  #cityfilter button {
+  #cityfilter button{
     padding: 8px 15px;
     font-size: 14px;
     color: #fff;

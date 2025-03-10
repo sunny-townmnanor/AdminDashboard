@@ -1,0 +1,50 @@
+.advboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    justify-items: center; /* Center items within the grid */
+  }
+  
+  .advcards {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; /* Limit card width */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .advcards:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  #advid {
+    width: 100%;
+    height: 180px; /* Set a fixed height */
+    object-fit: cover; /* Ensure image fills the space */
+    border-radius: 8px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e0484d;
+  }
+  

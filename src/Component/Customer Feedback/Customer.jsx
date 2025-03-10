@@ -67,7 +67,7 @@ function Customer() {
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Adjust this number based on your preference
+  const itemsPerPage = 7; // Adjust this number based on your preference
 
   // Function to handle deleting a feedback entry
   const handleStatus = (id) => {
@@ -99,8 +99,13 @@ function Customer() {
       <div>
         <AdminAccesor />
       </div>
-      <div className="customer-feedback">
-        <h1>Customer Feedback</h1>
+      <div className="customer-feedback" style={{
+        width:'100%',
+        padding:'20px'
+      }}>
+        <h1 style={{
+          textAlign:'center'
+        }}> Customer Feedback</h1>
 
         <table className="table">
           <thead>

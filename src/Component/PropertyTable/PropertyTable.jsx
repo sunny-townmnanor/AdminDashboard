@@ -81,7 +81,7 @@ function PropertyTable() {
     <div className='propertytable'>
       <div><AdminAccesor /></div>
       <div className='propertycontrol'>
-        <span id='proptablehead'>Property Listing Management Portal</span>
+        <span id='proptablehead' >Property Listing Management Portal</span>
         <div id='navigation'>
           <input type='text' name='projectname' value={filters.projectname} onChange={handleFilterChange} />
           <button className='btn btn-primary'>Project Name</button>

@@ -144,27 +144,32 @@ function PropertyEditForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const datatosubmit ={
+  
+    // Format the property_date before submitting
+    const formattedDate = new Date(propertyData.property_date);
+    const formattedPropertyDate = formattedDate.toISOString().split('T')[0]; // Converts date to 'YYYY-MM-DD'
+  
+    const datatosubmit = {
       ...propertyData,
-      floorplan:floorplan,
-      image_repository:photos
-    }
-    console.log("datatosubmit",datatosubmit);
-    try{
-      const response = axios.put(`https://www.townmanor.ai/api/owner-property/${index}`,datatosubmit, {
+      property_date: formattedPropertyDate, // Use the formatted date
+      floorplan: floorplan,
+      image_repository: photos,
+    };
+    console.log("datatosubmit", datatosubmit);
+  
+    try {
+      const response = await axios.put(`https://www.townmanor.ai/api/owner-property/${index}`, datatosubmit, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      alert('submitted SucessFully')
+      alert('submitted Successfully');
       console.log(response);
-      
-    }
-    catch(error){
-    console.log(error)
+    } catch (error) {
+      console.log(error);
     }
   };
+  
   
   
 

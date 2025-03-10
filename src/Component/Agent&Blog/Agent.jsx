@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import AdminAccesor from '../AdminAccesor';
 import './Agent.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Agent() {
     // Initial data is passed from the JSON file
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5; // Number of items per page
-  
+    const navigate  =useNavigate();
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -47,7 +48,10 @@ function Agent() {
         setImagePreview(item.img); // Set the initial preview to the current image
         setShowModal(true);
     };
-
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString(); // Default to your user's locale format (e.g., MM/DD/YYYY)
+    };
     const handleSave = () => {
         const updatedData = data.map(item =>
             item.id === editedItem.id ? editedItem : item
@@ -95,7 +99,9 @@ function Agent() {
                 <div style={{ display: 'flex' }}>
                     <h1 className="Agent_id">Article/Blog Dashboard</h1>
                 </div>
-
+                 <button className='btn btn-success' onClick={()=>{
+                    navigate('/uploadblog')
+                 }}>Upload Blog</button>
                 <form onSubmit={(e) => e.preventDefault()}>
                     {data.length === 0 ? (
                         <p>No articles available</p>
@@ -105,7 +111,9 @@ function Agent() {
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Picture</th>
+                                    <th scope="heading">Heading</th>
                                     <th scope="col">Content</th>
+
                                     <th scope="col">Date</th>
                                     <th scope="col">Edit</th>
                                     <th scope="col">Delete</th>
@@ -124,8 +132,10 @@ function Agent() {
                                                 style={{ width: '150px', height: '100px' }}
                                             />
                                         </td>
-                                        <td>{item.data}</td>
-                                        <td>{item.date}</td>
+                                        <th>{item.heading}</th>
+                                        <td>{item.data.substring(0,200)}</td>
+                                       
+                                        <td>{formatDate(item.date)}</td>
                                         <td>
                                             <button className="btn btn-warning btn-sm" onClick={() => handleEdit(item)}>
                                                 Edit

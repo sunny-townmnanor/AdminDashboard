@@ -19,7 +19,9 @@ const AgentFeature = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <div><AdminAccesor /></div>
-      <div className="agent-feature">
+      <div className="agent-feature" style={{
+        width:'100%'
+      }}>
         <h1>Agent Feature</h1>  {/* Updated heading for Agent Feature */}
         
         <table className="table table-striped">
