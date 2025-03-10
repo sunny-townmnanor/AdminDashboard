@@ -26,6 +26,15 @@ import PaymentPlanEdit from './Component/Commercial/PaymentPlanEdit'
 import AgentFeature from './Component/Agent_ feature/Agent_feature'
 import Subscription from './Component/Payment&Subscription/Subscription'
 import UserEditpage from './Component/Commercial/User/UserEditpage'
+import Advertisment from './Component/Advertisment/Advertisment'
+import HomePageAdv from './Component/Advertisment/HomePageAdv'
+import PropertyControl from './Component/PropertyTable/PropertyControl'
+import MainProperty from './Component/PropertyTable/MainProperty'
+import PropTechNews from './Component/Agent&Blog/PropTechNews'
+import ArticleComponent from './Component/Agent&Blog/ArticleComponent'
+import MainBlog from './Component/Agent&Blog/MainBlog'
+import News from './Component/Agent&Blog/News'
+import UploadArticle from './Component/Agent&Blog/UploadArticle'
 function App() {
 
 
@@ -33,7 +42,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Property />}></Route>
+          <Route path="/" element={<MainProperty />}></Route>
+                   <Route path="/ownerproperty" element={<Property />}></Route>
           <Route path="/editform/:index" element={<PropertyEditForm />}></Route>
           <Route path="/Inquire" element={<InquireMain />}></Route>
           <Route path="/HomeInsurance" element={<HomeInsurance />}></Route>
@@ -55,6 +65,14 @@ function App() {
           <Route path="/agentfeature" element={<AgentFeature/>}/>
           <Route path='/Subscription' element={<Subscription/>}/>
           <Route path='/useredit/:id' element={<UserEditpage/>}/>
+               <Route path='/proptech' element={<PropTechNews/>}/>
+                    <Route path='/singleblog/:id' element={<ArticleComponent/>}/>
+                    <Route path='/postcontrol' element={<MainBlog/>}/>
+                    <Route path='/news' element={<News/>}/>
+                       <Route path="/advertisment" element={<Advertisment/>}/>
+                              <Route path="/propertycontrol" element={<PropertyControl/>}/>
+                              <Route path="/homeadvertisment" element={<HomePageAdv/>}/>
+                                <Route path="/uploadarticle" element={<UploadArticle />} />
         </Routes> 
       </Router>
       {/* <AdminAccesor/>  */}
