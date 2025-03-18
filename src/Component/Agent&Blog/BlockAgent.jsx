@@ -62,7 +62,7 @@ function BlockAgent() {
                         objectFit: 'cover',
                     }}
                 />
-                <div className="text-overlay">
+                <div className="Town_Blog">
                     <h1>Welcome to <b>Townmanor Blog's</b> </h1>
                     <p>Discover <b>Best Blog </b>in one place</p>
                     <a href="#blogscard">

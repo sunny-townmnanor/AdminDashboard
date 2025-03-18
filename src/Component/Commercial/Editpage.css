@@ -8,13 +8,13 @@
     margin: 0 auto;
   }
   
-  .form-row {
+  .formgroup_Details_section {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
   }
 
-  .form-group {
+  .Amenities_form_status {
     margin-bottom: 20px;
     border: 1px solid gray;
     padding: 5px;

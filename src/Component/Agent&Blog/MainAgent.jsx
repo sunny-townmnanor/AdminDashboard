@@ -12,11 +12,11 @@ function MainAgent() {
         <div>
           <AdminAccesor />
         </div>
-        <div className='inquireworking' >
+        <div className='inquir_eworking' >
           <h1>Inquire Handle Page</h1>
           <div id='inquireboxes'>
-            <span className='inquiredivision item1' onClick={() => { navigate('/HomeInsurance') }}>Blog Mangement </span>
-            <span className='inquiredivision item2' onClick={() => { navigate('/HomeLoan') }}>Article Management</span>
+            <span className='inquire_division item1' onClick={() => { navigate('/HomeInsurance') }}>Blog Mangement </span>
+            <span className='inquire_division item2' onClick={() => { navigate('/HomeLoan') }}>Article Management</span>
             
             {/* <span className='inquiredivision'> Commercial</span> */}
           </div>

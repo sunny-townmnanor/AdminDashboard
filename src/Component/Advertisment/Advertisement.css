@@ -28,13 +28,13 @@
     border-radius: 8px;
   }
   
-  h3 {
+ .advstatus {
     margin: 10px 0;
     font-size: 18px;
     color: #333;
   }
   
-  button {
+  .change_status {
     background-color: #ff5a5f;
     color: white;
     border: none;
@@ -44,7 +44,7 @@
     transition: background-color 0.3s;
   }
   
-  button:hover {
+  .change_status:hover {
     background-color: #e0484d;
   }
   

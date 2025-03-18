@@ -64,19 +64,19 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .footer-container {
+  .Newsletter_status {
     width: 100%;
     background: #f9f9f9;
     padding: 20px;
     text-align: center;
   }
-  .footer-input {
+  .Newsletter_input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-right: 10px;
   }
-  .footer-button {
+  .Newsletter_button {
     background: #28a745;
     color: white;
     padding: 10px 15px;
@@ -89,7 +89,7 @@
     flex-direction: row;
     gap: 0px 20px;
   }
-  .articlesimilar {
+  .article_similar {
     max-width: 400px;
     padding: 15px;
     border-radius: 10px;

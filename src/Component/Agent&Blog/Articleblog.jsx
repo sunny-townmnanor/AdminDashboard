@@ -45,7 +45,7 @@ function Articleblog() {
         <div className="Appx">
             {/* Header Section */}
             <header className="App-headerx">
-                <div className="text-overlay">
+                <div className="text_overlay">
                     <h1>{data.heading}</h1>
                 </div>
             </header>
@@ -59,7 +59,7 @@ function Articleblog() {
                 </div>
 
                 <div>
-                    <div className="card-container">
+                    <div className="card_container_status">
                         <div className="card-1">
                             <h2>Subscribe to our Blogs</h2>
                             <p>Get the latest blogs</p>
@@ -76,7 +76,7 @@ function Articleblog() {
                             />
                             <div id="email-error" className="error-message"></div>
 
-                            <div className="checkbox-group">
+                            <div className="checkbox_group_status">
                                 <label>
                                     <input type="checkbox" name="terms" value="agree-terms" required />
                                     <span>I Agree to the <a href="#" id="terms-link">Terms and Conditions</a>.</span>
@@ -84,14 +84,14 @@ function Articleblog() {
                             </div>
                             <div id="terms-error" className="error-message"></div>
 
-                            <div className="checkbox-group">
+                            <div className="checkbox_group_status">
                                 <label>
                                     <input type="checkbox" name="newsletter" value="subscribe-newsletter" />
                                     <span>Subscribe to our newsletter.</span>
                                 </label>
                             </div>
 
-                            <button type="submit" className="submit-button">Subscribe</button>
+                            <button type="submit" className="submit_button">Subscribe</button>
                         </form>
                     </div>
                 </div>

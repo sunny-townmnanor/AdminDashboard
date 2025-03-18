@@ -71,7 +71,7 @@
 
 button {
   padding: 12px 25px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
   color: white;
   border: none;
   border-radius: 8px; 

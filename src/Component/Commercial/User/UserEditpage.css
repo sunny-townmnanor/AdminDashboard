@@ -14,13 +14,13 @@
     padding: 30px;
   }
   
-  .form-row {
+  .View_Payment_Plan{
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
   }
 
-  .form-group {
+  .Retail_form_group {
     margin-bottom: 25px;
     border: 1px solid #e0e0e0;
     padding: 15px;
@@ -31,7 +31,7 @@
     background-color: #fafafa;
   }
   
-  .form-group:hover {
+  .Retail_form_group:hover {
     border-color: #ff4447;
     box-shadow: 0 0 10px rgba(255, 68, 71, 0.1);
   }
@@ -67,7 +67,7 @@
     font-weight: normal;
   }
   
-  .image-preview-container {
+  .img_pre_status {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -227,7 +227,7 @@
     border: 1px solid #ced4da;
   }
   
-  .upload-progress {
+  .upload_img_progress {
     height: 5px;
     background-color: #e9ecef;
     border-radius: 3px;
@@ -235,7 +235,7 @@
     overflow: hidden;
   }
   
-  .upload-progress-bar {
+  .upload_img_progress_bar {
     height: 100%;
     background: linear-gradient(to right, #ff4447, #8a2e2e);
     transition: width 0.3s;

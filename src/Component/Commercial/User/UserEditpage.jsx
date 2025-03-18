@@ -215,7 +215,7 @@ function UserEditpage() {
     );
   }
 
-  if (!project) return <div className="loading-spinner">Project not found</div>;
+  if (!project) return <div className="loading_sp">Project not found</div>;
 
   // Navigation tabs for different sections
   const renderTabs = () => (
@@ -235,7 +235,7 @@ function UserEditpage() {
         </button>
       </div>
       <div>
-        <div className="form-row" style={{ justifyContent: 'center', margin: '0px' }}>
+        <div className="View_Payment_Plan" style={{ justifyContent: 'center', margin: '0px' }}>
           <button style={{margin: '0px'}}
             type="button"
             className="btn btn-payment"
@@ -261,17 +261,17 @@ function UserEditpage() {
         <form>
           {/* Basic Details Section */}
           {activeSection === 'basic' && (
-            <div className="form-section">
+            <div className="form_sec_status">
               <h3 className="section-title">Basic Details</h3>
               
-              <div className="form-row">
-                <div className="form-group col-md-6">
+              <div className="View_Payment_Plan">
+                <div className="Retail_form_group col-md-6">
                   <label>Project Name</label>
                   <div className="readonly-field">
                     {project.project_name}
                   </div>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="Retail_form_group col-md-6">
                   <label>City</label>
                   <div className="readonly-field">
                     {project.city}
@@ -279,8 +279,8 @@ function UserEditpage() {
                 </div>
               </div>
 
-              <div className="form-row">
-                <div className="form-group col-md-6">
+              <div className="View_Payment_Plan">
+                <div className="Retail_form_group col-md-6">
                   <label>Address</label>
                   <input 
                     type="text" 
@@ -292,7 +292,7 @@ function UserEditpage() {
                   />
                   {formErrors.address && <div className="error-message">{formErrors.address}</div>}
                 </div>
-                <div className="form-group col-md-6">
+                <div className="Retail_form_group col-md-6">
                   <label>Investment</label>
                   <input 
                     type="text" 
@@ -306,8 +306,8 @@ function UserEditpage() {
                 </div>
               </div>
 
-              <div className="form-row">
-                <div className="form-group col-md-6">
+              <div className="View_Payment_Plan">
+                <div className="Retail_form_group col-md-6">
                   <label>Construction Status</label>
                   <select 
                     value={project.construction_status} 
@@ -320,7 +320,7 @@ function UserEditpage() {
                     <option value="Ready to Move">Ready to Move</option>
                   </select>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="Retail_form_group col-md-6">
                   <label>Project Unit</label>
                   <input 
                     type="number" 
@@ -347,11 +347,11 @@ function UserEditpage() {
 
           {/* Images Section */}
           {activeSection === 'images' && (
-            <div className="form-section">
+            <div className="form_sec_status">
               <h3 className="section-title">Project Images</h3>
               
               {/* Image Banner */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Banner Image (Main display image)</label>
                 <input 
                   type="file" 
@@ -360,14 +360,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'image_banner')} 
                 />
                 {uploadProgress.image_banner !== undefined && uploadProgress.image_banner !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.image_banner}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.image_banner) && imagePreview.image_banner.length > 0 && imagePreview.image_banner.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -378,7 +378,7 @@ function UserEditpage() {
               </div>
 
               {/* Main Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Main Project Images</label>
                 <input 
                   type="file" 
@@ -388,14 +388,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'main_image')} 
                 />
                 {uploadProgress.main_image !== undefined && uploadProgress.main_image !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.main_image}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.main_image) && imagePreview.main_image.length > 0 && imagePreview.main_image.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -406,7 +406,7 @@ function UserEditpage() {
               </div>
 
               {/* Floorplan Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Floorplan Images</label>
                 <input 
                   type="file" 
@@ -416,14 +416,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'floorplan')} 
                 />
                 {uploadProgress.floorplan !== undefined && uploadProgress.floorplan !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.floorplan}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.floorplan) && imagePreview.floorplan.length > 0 && imagePreview.floorplan.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -434,7 +434,7 @@ function UserEditpage() {
               </div>
 
               {/* Office Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Office Space Images</label>
                 <input 
                   type="file" 
@@ -444,14 +444,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'office_image')} 
                 />
                 {uploadProgress.office_image !== undefined && uploadProgress.office_image !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.office_image}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.office_image) && imagePreview.office_image.length > 0 && imagePreview.office_image.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -462,7 +462,7 @@ function UserEditpage() {
               </div>
 
               {/* Retail Shop Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Retail Shop Images</label>
                 <input 
                   type="file" 
@@ -472,14 +472,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'retail_shop')} 
                 />
                 {uploadProgress.retail_shop !== undefined && uploadProgress.retail_shop !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.retail_shop}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.retail_shop) && imagePreview.retail_shop.length > 0 && imagePreview.retail_shop.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -490,7 +490,7 @@ function UserEditpage() {
               </div>
 
               {/* Restaurant Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Restaurant Images</label>
                 <input 
                   type="file" 
@@ -500,14 +500,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'restaurant')} 
                 />
                 {uploadProgress.restaurant !== undefined && uploadProgress.restaurant !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.restaurant}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.restaurant) && imagePreview.restaurant.length > 0 && imagePreview.restaurant.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />
@@ -518,7 +518,7 @@ function UserEditpage() {
               </div>
 
               {/* Other Images */}
-              <div className="form-group">
+              <div className="Retail_form_group">
                 <label>Other Images</label>
                 <input 
                   type="file" 
@@ -528,14 +528,14 @@ function UserEditpage() {
                   onChange={(e) => handleImageUpload(e, 'other')} 
                 />
                 {uploadProgress.other !== undefined && uploadProgress.other !== null && (
-                  <div className="upload-progress">
+                  <div className="upload_img_progress">
                     <div 
-                      className="upload-progress-bar" 
+                      className="upload_img_progress_bar" 
                       style={{ width: `${uploadProgress.other}%` }}
                     ></div>
                   </div>
                 )}
-                <div className="image-preview-container">
+                <div className="img_pre_status">
                   {Array.isArray(imagePreview.other) && imagePreview.other.length > 0 && imagePreview.other.map((imageUrl, index) => (
                     <div key={index} className="image-preview-item">
                       <img src={`https://s3.ap-south-1.amazonaws.com/townamnor.ai/commercial-images/${imageUrl}`} alt="" className="image-preview" />

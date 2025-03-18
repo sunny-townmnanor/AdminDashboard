@@ -171,8 +171,8 @@ function Editpage() {
 
         {/* Basic Details Section */}
         <form>
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="formgroup_Details_section">
+            <div className="Amenities_form_status col-md-6">
               <label>Project Name</label>
               <input
                 type="text"
@@ -182,7 +182,7 @@ function Editpage() {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="Amenities_form_status col-md-6">
               <label>City</label>
               <input
                 type="text"
@@ -194,8 +194,8 @@ function Editpage() {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="formgroup_Details_section">
+            <div className="Amenities_form_status col-md-6">
               <label>Address</label>
               <input
                 type="text"
@@ -205,7 +205,7 @@ function Editpage() {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="Amenities_form_status col-md-6">
               <label>Investment</label>
               <input
                 type="text"
@@ -217,8 +217,8 @@ function Editpage() {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="formgroup_Details_section">
+            <div className="Amenities_form_status col-md-6">
               <label>Builder</label>
               <input
                 type="text"
@@ -228,7 +228,7 @@ function Editpage() {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="Amenities_form_status col-md-6">
               <label>Possession Date</label>
               <input
                 type="text"
@@ -241,49 +241,49 @@ function Editpage() {
           </div>
 
           {/* Other Details Section */}
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="formgroup_Details_section">
+            <div className="Amenities_form_status col-md-6">
               <label>Construction Status</label>
               <select value={project.construction_status} className="form-control" name="construction_status" onChange={handleChange}>
                 <option value="Under construction">Under construction</option>
                 <option value="Ready to Move">Ready to Move</option>
               </select>
             </div>
-            <div className="form-group col-md-6">
+            <div className="Amenities_form_status col-md-6">
               <label>Project Unit</label>
               <input type="number" className="form-control" name="project_unit" value={project.project_unit} onChange={handleChange} />
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="formgroup_Details_section">
+            <div className="Amenities_form_status col-md-6">
               <label>Latitude</label>
               <input type="number" step="any" className="form-control" name="lat" value={project.lat} onChange={handleChange} />
             </div>
-            <div className="form-group col-md-6">
+            <div className="Amenities_form_status col-md-6">
               <label>Longitude</label>
               <input type="number" step="any" className="form-control" name="lng" value={project.lng} onChange={handleChange} />
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Description</label>
             <textarea className="form-control" name="description" value={project.description} onChange={handleChange} />
           </div>
 
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>RERA ID</label>
             <input type="text" className="form-control" name="rera_id" value={project.rera_id} onChange={handleChange} />
           </div>
 
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Project Area Range</label>
             <input type="text" className="form-control" name="project_area_range" value={project.project_area_range} onChange={handleChange} />
           </div>
 
           {/* Amenities Section */}
 
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Amenities</label>
             <div className="amenities-list">
               {["Air conditioning", "power Backup", "Swimming Pool", "Internet", "Dishwasher", "MicroWave", "Intercomm Facility", "Gas Pipeline", "Gymnasium", "Parking", "Restuarant", "CCTV", "lift", "Atm", "24*7 Water Supply", "Court", "ClubHouse", "PlayArea", "GuestParking", "24*7 Security"].map((amenity, index) => (
@@ -302,7 +302,7 @@ function Editpage() {
           </div>
 
 
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Distances</label>
             {Array.isArray(distances) && distances.length > 0 ? (
               distances.map((distance, index) => (
@@ -334,7 +334,7 @@ function Editpage() {
 
           {/* Image Sections */}
           {/* Image Banner */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Image Banner</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'image_banner')} />
             <div className="image-preview-container">
@@ -348,7 +348,7 @@ function Editpage() {
           </div>
 
           {/* Main Images */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Main Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'main_image')} />
             <div className="image-preview-container">
@@ -362,7 +362,7 @@ function Editpage() {
           </div>
 
           {/* Floorplan Images */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Floorplan Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'floorplan')} />
             <div className="image-preview-container">
@@ -376,7 +376,7 @@ function Editpage() {
           </div>
 
           {/* Office Images */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Office Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'office_image')} />
             <div className="image-preview-container">
@@ -390,7 +390,7 @@ function Editpage() {
           </div>
 
           {/* Retail Shop Images */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Retail Shop Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'retail_shop')} />
             <div className="image-preview-container">
@@ -404,7 +404,7 @@ function Editpage() {
           </div>
 
           {/* Restaurant Images */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>Upload Restaurant Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'restaurant')} />
             <div className="image-preview-container">
@@ -417,7 +417,7 @@ function Editpage() {
             </div>
           </div>
           {/* other */}
-          <div className="form-group">
+          <div className="Amenities_form_status">
             <label>other Images</label>
             <input type="file" accept="image/*" className="form-control" multiple onChange={(e) => handleImageUpload(e, 'other')} />
             <div className="image-preview-container">
@@ -430,7 +430,7 @@ function Editpage() {
             </div>
           </div>
           {/* Save/Cancel Buttons */}
-          <div className="form-row">
+          <div className="formgroup_Details_section">
             <button type="button" className="btn btn-success" onClick={handleSave}>
               Save
             </button>

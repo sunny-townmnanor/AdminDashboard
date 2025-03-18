@@ -23,7 +23,7 @@
     /* Ensure the image covers the entire header */
 }
 
-.text-overlay {
+.text_overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,13 +35,13 @@
 
 }
 
-.text-overlay h1 {
+.text_overlay h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-transform: capitalize;
   font-size: 2.3rem;
 }
 
-.text-overlay p {
+.text_overlay p {
     font-size: 1.2rem;
     margin: 10px 0;
 }
@@ -91,7 +91,7 @@
     font-size: 18px;
 
 }
-.card-container {
+.card_container_status {
    padding: 20px;
     border-radius: 24px;
     max-width: 530px;
@@ -139,18 +139,18 @@
     margin-bottom: 40px;
   }
   
-  .checkbox-group {
+  .checkbox_group_status {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
   
-  .checkbox-group label {
+  .checkbox_group_status label {
     display: flex;
     align-items: center;
   }
   
-  .checkbox-group input[type="checkbox"] {
+  .checkbox_group_status input[type="checkbox"] {
     margin-right: 10px;
     height: 32px;
     width: 32px;
@@ -162,7 +162,7 @@
     color: #141a3a;
   }
   
-  .submit-button {
+  .submit_button {
     background-color: #bf2e2e;
     color: white;
     border: 1px solid #cb6565;
@@ -178,7 +178,7 @@
     margin-top: 20px;
   }
   
-  .submit-button:hover {
+  .submit_button:hover {
     border-color: #ab4c4c;
     transform: scale(1.05);
   }
@@ -285,7 +285,7 @@
       font-size: 14px;
     }
   
-    .submit-button {
+    .submit_button {
       word-wrap: break-word;
     }
     .similarblog h1 {

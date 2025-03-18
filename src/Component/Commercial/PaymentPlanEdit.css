@@ -22,7 +22,7 @@
     gap: 0.5rem;
   }
   
-  .form-section {
+  .Pricing_form_section {
     margin-bottom: 0rem;
     padding: 1rem;
   }
@@ -59,7 +59,7 @@
     background-color: #f8f9fa;
   }
   
-  .form-control:focus {
+  .payment_p_s_status:focus {
     border-color: #3498db;
     box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
   }

@@ -171,14 +171,14 @@ function PaymentPlanEdit() {
 
       <div className="card main-form-card mb-4">
         <div className="card-body">
-          <div className="form-section">
+          <div className="Pricing_form_section">
             <h4 className="section-title"><FaChartArea /> Basic Information</h4>
             <div className="row">
               <div className="col-md-6 form-group">
                 <label>Project Name</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="payment_p_s_status payment_p_s_status-lg"
                   name="name"
                   value={project.name}
                   onChange={handleChange}
@@ -189,7 +189,7 @@ function PaymentPlanEdit() {
                 <label>Category</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="payment_p_s_status payment_p_s_status-lg"
                   name="category"
                   value={project.category.charAt(0).toUpperCase() + project.category.slice(1).toLowerCase()}
                   onChange={handleChange}
@@ -200,7 +200,7 @@ function PaymentPlanEdit() {
                 <label>Comm Prop Id</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="payment_p_s_status payment_p_s_status-lg"
                   name="category"
                   value={project.com_prop_id}
                   onChange={handleChange}
@@ -210,7 +210,7 @@ function PaymentPlanEdit() {
             </div>
           </div>
 
-          <div className="form-section">
+          <div className="Pricing_form_section">
             <h4 className="section-title"><FaMoneyCheckAlt /> Pricing & Status</h4>
             <div className="row">
               <div className="col-md-4 form-group">
@@ -221,7 +221,7 @@ function PaymentPlanEdit() {
                   </div>
                   <input
                     type="text"
-                    className="form-control"
+                    className="payment_p_s_status"
                     name="price"
                     value={project.price}
                     onChange={handleChange}
@@ -233,7 +233,7 @@ function PaymentPlanEdit() {
                 <label>Available Units</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="payment_p_s_status"
                   name="available_unit"
                   value={project.available_unit || 'null'}
                   onChange={handleChange}
@@ -243,7 +243,7 @@ function PaymentPlanEdit() {
                 <label>Total Units</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="payment_p_s_status"
                   name="total_unit"
                   value={project.total_unit || 'null'}
                   onChange={handleChange}
@@ -253,21 +253,21 @@ function PaymentPlanEdit() {
           </div>
 
           {/* Payment Plan Section */}
-          <div className="form-section">
+          <div className="Pricing_form_section">
             <h4 className="section-title"><FaCube /> Payment Plan Structure</h4>
             <div className="card-body">
               <div className="card mb-3">
                 {project.paymentplan.map((plan, index) => (
                   <div className="row" key={index}>
                     <div className="col-md-8 form-group">
-                      <input type="text" className="form-control" value={plan[0]} onChange={(e) => handlePaymentPlanChange(e, index, 0)} required />
+                      <input type="text" className="payment_p_s_status" value={plan[0]} onChange={(e) => handlePaymentPlanChange(e, index, 0)} required />
                     </div>
                     <div className="col-md-4 form-group">
                       <div className="input-group">
                         <div className="input-group-prepend">
                           <span className="input-group-text">₹</span>
                         </div>
-                        <input type="text" className="form-control" value={plan[1]} onChange={(e) => handlePaymentPlanChange(e, index, 1)} required />
+                        <input type="text" className="payment_p_s_status" value={plan[1]} onChange={(e) => handlePaymentPlanChange(e, index, 1)} required />
                       </div>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ function PaymentPlanEdit() {
             </div>
           </div>
 
-          {/* <div className="form-section">
+          {/* <div className="Pricing_form_section">
             <h4 className="section-title">Additional Information</h4>
             <div className="card-body">
               <div className="card mb-3">
@@ -285,7 +285,7 @@ function PaymentPlanEdit() {
                     <div className="col-md-8 form-group">
                       <input
                         type="text"
-                        className="form-control"
+                        className="payment_p_s_status"
                         value={charge[0]}
                         onChange={(e) => handleOtherChargeChange(e, index, 0)}
                         required
@@ -298,7 +298,7 @@ function PaymentPlanEdit() {
                         </div>
                         <input
                           type="text"
-                          className="form-control"
+                          className="payment_p_s_status"
                           value={charge[1]}
                           onChange={(e) => handleOtherChargeChange(e, index, 1)}
                           required
@@ -313,7 +313,7 @@ function PaymentPlanEdit() {
           </div> */}
 
            {/* Other Charges Section */}
-           <div className="form-section">
+           <div className="Pricing_form_section">
             <h4 className="section-title"><FaMoneyCheckAlt /> Other Charges</h4>
             <div className="card-body">
               <div className="card mb-3">
@@ -322,7 +322,7 @@ function PaymentPlanEdit() {
                     <div className="col-md-8 form-group">
                       <input
                         type="text"
-                        className="form-control"
+                        className="payment_p_s_status"
                         value={charge[0]}
                         onChange={(e) => handleOtherChargeChange(e, index, 0)}
                         required
@@ -335,7 +335,7 @@ function PaymentPlanEdit() {
                         </div>
                         <input
                           type="text"
-                          className="form-control"
+                          className="payment_p_s_status"
                           value={charge[1]}
                           onChange={(e) => handleOtherChargeChange(e, index, 1)}
                           required
@@ -356,7 +356,7 @@ function PaymentPlanEdit() {
               <input
                 type="file"
                 accept="images/*"
-                className="form-control"
+                className="payment_p_s_status"
                 multiple
                 name="floorplan"
                 onChange={(e) => handleImageUpload(e, 'floorplan')}

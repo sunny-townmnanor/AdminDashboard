@@ -202,7 +202,7 @@ function Agent() {
                                         <textarea
                                             id="context"
                                             name="data"
-                                            className="form-control"
+                                            className="model_eding_status"
                                             value={editedItem.data}
                                             onChange={handleChange}
                                         />
@@ -213,7 +213,7 @@ function Agent() {
                                             type="date"
                                             id="date"
                                             name="date"
-                                            className="form-control"
+                                            className="model_eding_status"
                                             value={editedItem.date}
                                             onChange={handleChange}
                                         />
@@ -224,7 +224,7 @@ function Agent() {
                                             type="file"
                                             id="img"
                                             name="img"
-                                            className="form-control"
+                                            className="model_eding_status"
                                             onChange={handleImageChange}
                                         />
                                         {imagePreview && (

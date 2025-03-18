@@ -89,7 +89,7 @@ const ArticleComponent = () => {
         <div className="article-container">
             <div className="similarbox">
                 {previousBlog && (
-                    <div className="articlesimilar">
+                    <div className="article_similar">
                         <div style={{ height: '276px' }}>
                             <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/blog-image' + previousBlog.img} alt="Previous Blog" className="proptech-card-image" />
                         </div>
@@ -100,7 +100,7 @@ const ArticleComponent = () => {
                 )}
 
                 {nextBlog && (
-                    <div className="articlesimilar">
+                    <div className="article_similar">
                         <div style={{ height: '276px' }}>
                             <img src={'https://s3.ap-south-1.amazonaws.com/townamnor.ai/blog-image' + nextBlog.img}alt="Next Blog" className="proptech-card-image" />
                         </div>
@@ -142,13 +142,13 @@ const ArticleComponent = () => {
                     </div>
                 </article>
 
-                <footer className="footer-container">
+                <footer className="Newsletter_status">
                     <div className="footer-content">
                         <h3 className="footer-title">Subscribe to Our Newsletter</h3>
                         <p className="footer-text">Stay updated with the latest PropTech news and insights.</p>
-                        <div className="footer-subscription">
-                            <input type="email" placeholder="Your email address" className="footer-input" />
-                            <button className="footer-button">Subscribe</button>
+                        <div className="Newsl_subscription">
+                            <input type="email" placeholder="Your email address" className="Newsletter_input" />
+                            <button className="Newsletter_button">Subscribe</button>
                         </div>
                     </div>
                 </footer>

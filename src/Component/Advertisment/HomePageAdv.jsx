@@ -158,8 +158,8 @@ function HomePageAdv() {
               adv.map((item, index) => (
                 <div key={index} className="advcards">
                   <img src={trimHtmlEncodedString(item.imageUrl)} alt={item.imgname} id="advid" />
-                  <h3>Status: {item.status}</h3>
-                  <button>Change Status</button>
+                  <h3 className='advstatus'>Status: {item.status}</h3>
+                  <button className='change_status'>Change Status</button>
                 </div>
               ))
               :
