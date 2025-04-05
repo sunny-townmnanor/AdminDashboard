@@ -35,6 +35,7 @@ import ArticleComponent from './Component/Agent&Blog/ArticleComponent'
 import MainBlog from './Component/Agent&Blog/MainBlog'
 import News from './Component/Agent&Blog/News'
 import UploadArticle from './Component/Agent&Blog/UploadArticle'
+import PropertyEditFormEnhanced from './Component/PropertyTable/PropertyEditFormEnhanced'
 function App() {
 
 
@@ -73,6 +74,7 @@ function App() {
                               <Route path="/propertycontrol" element={<PropertyControl/>}/>
                               <Route path="/homeadvertisment" element={<HomePageAdv/>}/>
                                 <Route path="/uploadarticle" element={<UploadArticle />} />
+                                <Route path="/editform2/:id" element={<PropertyEditFormEnhanced />} />
         </Routes> 
       </Router>
       {/* <AdminAccesor/>  */}
